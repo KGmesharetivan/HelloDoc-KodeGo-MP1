@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Appointment Calendar</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/izitoast/dist/css/iziToast.min.css"
+    />
+    <link rel="stylesheet" href="appointment.css" />
+  </head>
+
+  <body>
+    <main>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#"
+          ><img src="Logo.jpg" alt="" class="logo-img"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link shadow__btn" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link shadow__btn" href="#doctors"
+                >Book Appointment</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link shadow__btn" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <br /><br />
+      <div class="container">
+        <div class="row w-100">
+          <!-- Image Column -->
+          <div class="col-md-4 d-flex align-items-start justify-content-center">
+            <div class="col-lg-8">
+              <div class="d-flex mb-4">
+                <figure class="mr-4">
+                  <img
+                    src="./doctor1.jpg"
+                    alt="Doctor Name"
+                    class="img-thumbnail"
+                    style="
+                      width: 100px;
+                      height: 100px;
+                      object-fit: cover;
+                      border-radius: 50%;
+                    "
+                  />
+                </figure>
+                <div>
+                  <span class="badge badge-info specialization"
+                    >Cardiologist</span
+                  >
+                  <h5 class="mt-2 mb-1">Dr. John Doe</h5>
+                </div>
+              </div>
+              <div class="experience-info mb-1">10 Years of Experience</div>
+              <div class="qualification text-muted">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Aperiam quasi, perspiciatis minus facere veritatis deleniti
+                quisquam sequi dolore amet tenetur blanditiis recusandae
+                molestias! Quibusdam ad quidem enim quam voluptate obcaecati.
+              </div>
+            </div>
+          </div>
+
+          <!-- Calendar Column -->
+          <div class="calendar col-md-8">
+            <div>
+              <div class="card-header bg-primary">
+                <ul>
+                  <li
+                    id="month"
+                    class="text-white text-uppercase text-center"
+                  ></li>
+                  <li
+                    id="year"
+                    class="text-white text-uppercase text-center"
+                  ></li>
+                </ul>
+              </div>
+              <table
+                class="table calendar table-bordered table-responsive-sm"
+                id="calendar"
+              >
+                <thead>
+                  <tr class="weekdays bg-dark">
+                    <th scope="col" class="text-white text-center">Mo</th>
+                    <th scope="col" class="text-white text-center">Tu</th>
+                    <th scope="col" class="text-white text-center">We</th>
+                    <th scope="col" class="text-white text-center">Th</th>
+                    <th scope="col" class="text-white text-center">Fr</th>
+                    <th scope="col" class="text-white text-center">Sa</th>
+                    <th scope="col" class="text-white text-center">Su</th>
+                  </tr>
+                </thead>
+                <tbody class="days bg-light" id="days"></tbody>
+                <tfoot></tfoot>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <br />
+        <hr />
+
+        <div class="row">
+          <div class="col offset-md-1">
+            <br />
+            <p>
+              If you wish to schedule an appointment with the doctor, please
+              note the available timings:
+            </p>
+            <p>
+              Please feel free to contact our clinic during these hours to book
+              your appointment.
+            </p>
+          </div>
+
+          <div class="col-md-7 offset-md-1">
+            <form id="form_create_appointment">
+              <div class="form-row">
+                <div class="col form-group">
+                  <label class="required">Date</label>
+                  <input
+                    class="form-control date-input"
+                    type="text"
+                    id="date"
+                    data-trigger="hover"
+                    data-toggle="popover"
+                    title="Date"
+                    data-content="You can select any date from today clicking on the number in the calendar"
+                    required
+                  />
+                </div>
+                <div class="col form-group">
+                  <label>Description</label>
+                  <input class="form-control" type="text" id="description" />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="col form-group">
+                  <label class="required">Start Time</label>
+                  <select
+                    class="form-control"
+                    id="start_time"
+                    required
+                  ></select>
+                </div>
+                <div class="col form-group">
+                  <label class="required">End Time</label>
+                  <select class="form-control" id="end_time" required></select>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="col form-group">
+                  <button
+                    type="button"
+                    class="btn btn-warning btn-block"
+                    id="clear"
+                    onclick="clear_input()"
+                  >
+                    Clear Form
+                  </button>
+                </div>
+                <div class="col form-group">
+                  <button
+                    type="button"
+                    class="btn btn-primary btn-block"
+                    id="submit"
+                    onclick="make_appointment()"
+                    disabled="disabled"
+                  >
+                    Make Appointment
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- External Scripts -->
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.x.x/jquery.inputmask.bundle.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/izitoast/dist/js/iziToast.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+      <script src="script.js"></script>
+      <!-- Footer -->
+      <footer class="footer mt-auto py-3 bg-dark">
+        <div class="container">
+          <span class="text-muted">&copy; 2023 ODA. All rights reserved.</span>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

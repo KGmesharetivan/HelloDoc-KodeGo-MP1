@@ -1,0 +1,397 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: full;
+}
+
+body {
+  background: #dce9fb;
+  background: radial-gradient(circle, #dce9fb 0%, #cff3ff 50%, #c8e8ff 100%);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body nav.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav {
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: rgb(166, 213, 215);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav .logo-img {
+  width: 100px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+nav ul li {
+  margin: 0 10px;
+  transition: transform 0.3s;
+}
+
+nav ul li a {
+  color: #000;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+nav ul li:hover {
+  transform: translateY(-2px);
+}
+
+nav ul li a:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Component Styles */
+.shadow__btn {
+  padding: 10px 20px;
+  border: none;
+  font-size: 17px;
+  color: #000;
+  border-radius: 7px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.3s;
+  background: radial-gradient(circle, #dce9fb 0%, #cff3ff 50%, #c8e8ff 100%);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.shadow__btn:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.slide-panel {
+  background: #dce9fb;
+  background: radial-gradient(circle, #dce9fb 0%, #cff3ff 50%, #c8e8ff 100%);
+  margin-top: 2em;
+  border: none;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+  background: #dce9fb;
+  background: radial-gradient(circle, #dce9fb 0%, #cff3ff 50%, #c8e8ff 100%);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 2em;
+  border: none;
+  border-radius: 10px; /* Adding rounded corners for aesthetic */
+}
+
+.list-group {
+  border-radius: 8px; /* Adds a slight rounded corner to the list */
+  overflow: hidden; /* Ensures the rounded corners are applied to the children */
+}
+
+.list-group-item {
+  background: #dce9fb;
+  background: radial-gradient(circle, #dce9fb 0%, #cff3ff 50%, #c8e8ff 100%);
+  border: none; /* Removes the default border */
+  margin-bottom: 10px; /* Adds a gap between list items if there are multiple */
+  transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+.list-group-item:hover {
+  transform: scale(
+    1.02
+  ); /* Slightly enlarges the list item on hover for a subtle effect */
+}
+
+.about {
+  background: #dce9fb;
+  background: radial-gradient(circle, #dce9fb 0%, #cff3ff 50%, #c8e8ff 100%);
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 5px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+}
+
+.doctor-info {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+figure {
+  max-width: 130px;
+  max-height: 130px;
+  overflow: hidden;
+}
+
+figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.specialization {
+  background-color: #ccf0f3;
+  color: #00a0d6;
+  padding: 0.5px 5px;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+h3 {
+  color: #333;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.tab-content {
+  margin-top: 40px;
+  padding: 10px 0;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.mt-12 {
+  margin-top: 40px;
+}
+
+.pt-4 {
+  padding-top: 20px;
+}
+
+.tab-content ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.tab-content ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.tab-content ul li:last-child {
+  border-bottom: none;
+}
+
+.tab-content p {
+  margin: 10px 0;
+  font-size: 15px;
+  color: #666;
+}
+
+.tab-content span.specialization {
+  display: block;
+  margin-bottom: 10px;
+  color: #00a0d6;
+  font-weight: 600;
+}
+
+.experience-info {
+  display: flex;
+  gap: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+}
+
+.qualification {
+  font-size: 13px;
+  font-weight: 600;
+  color: #999;
+}
+
+.tabs {
+  margin-top: 40px;
+  border-bottom: 1px solid #0066ff34;
+}
+
+.tab {
+  padding: 2px 4px;
+  margin-right: 4px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.tab.active {
+  border-bottom: 2px solid #0066ff;
+}
+
+.tab-content {
+  margin-top: 40px;
+}
+
+.slide-panel {
+  border: 1px solid #e5e5e5;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  width: 280px; /* Adjust as needed */
+}
+
+.ticket-price,
+.time-slots {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.price {
+  font-size: 22px;
+  color: #333;
+}
+
+.time-slots ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.day,
+.time {
+  font-size: 15px;
+  color: #666;
+}
+
+.error-msg {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.book-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.book-btn:hover {
+  background-color: #0056b3;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+}
+
+.specialization {
+  padding: 0.5em 1em;
+  font-size: 0.8rem;
+}
+
+.experience-info {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.qualification {
+  font-size: 1rem;
+}
+
+.figure img {
+  width: 100px;
+  height: 100px;
+}
+
+.slide-panel {
+  margin-top: 2em;
+}
+
+.price {
+  font-size: 1.5rem;
+}
+
+.day,
+.time {
+  font-weight: 500;
+}
+
+.nav-tabs .nav-link {
+  border-radius: 0;
+  border: none;
+  color: #007bff;
+}
+
+.nav-tabs .nav-link.active {
+  border: none;
+  border-bottom: 2px solid;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+}
+
+/* Media Queries */
+@media screen and (max-width: 767px) {
+  nav {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  nav .logo {
+    margin-bottom: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 5px 0;
+  }
+
+  #doctors .doctor-card {
+    width: 90%;
+    margin: 10px auto;
+  }
+}

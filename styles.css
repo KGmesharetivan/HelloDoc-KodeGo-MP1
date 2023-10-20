@@ -1,0 +1,493 @@
+/* Base Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #dce9fb;
+  background: radial-gradient(circle, #dce9fb 0%, #cff3ff 50%, #c8e8ff 100%);
+}
+
+body nav.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Resetting default margins and paddings for elements */
+h1,
+h2,
+p,
+button {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Variables */
+.wrapper {
+  --input-focus: #2d8cf0;
+  --font-color: #323232;
+  --font-color-sub: #666;
+  --bg-color: #fff;
+  --bg-color-alt: #666;
+  --main-color: #323232;
+}
+
+/* Main Layout Styles */
+main {
+  flex: 1;
+}
+
+nav {
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: rgb(166, 213, 215);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav .logo-img {
+  width: 100px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+nav ul li {
+  margin: 0 10px;
+  transition: transform 0.3s;
+}
+
+nav ul li a {
+  color: #000;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+nav ul li:hover {
+  transform: translateY(-2px);
+}
+
+nav ul li a:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+/* Component Styles */
+.shadow__btn {
+  padding: 10px 20px;
+  border: none;
+  font-size: 17px;
+  color: #000;
+  border-radius: 7px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.3s;
+  background: radial-gradient(circle, #dce9fb 0%, #cff3ff 50%, #c8e8ff 100%);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.shadow__btn:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Welcome Message Styles */
+.welcome-message {
+  text-align: center;
+  margin-bottom: -10px;
+}
+
+.welcome-message h1 {
+  font-size: 32px;
+  color: var(--main-color);
+  margin-bottom: 10px;
+}
+
+.welcome-message p {
+  font-size: 18px;
+  color: var(--font-color-sub);
+  margin-bottom: 20px;
+}
+
+.doctor-container {
+  display: flex;
+  flex-direction: row; /* This will make sure items inside are displayed in a row */
+  justify-content: center; /* Horizontally center the items */
+  flex-wrap: wrap; /* This will wrap the items to the next line if they don't fit in one row */
+  gap: 20px; /* Provides spacing between the doctor cards */
+}
+
+/* Home Section Styles */
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  background-image: url(./background2.png);
+  background-size: cover;
+  background-position: center;
+}
+
+#doctors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 0;
+}
+
+#doctors h2 {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+#doctors .doctor-card {
+  margin: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+#doctors .doctor-card:hover {
+  transform: translateY(-10px);
+}
+
+#doctors .doctor-card img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+/* Appointment Booking Page Styles */
+#booking {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.booking-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.calendar,
+.time-slots {
+  flex: 1;
+  border: 1px solid #ddd;
+  padding: 20px;
+  background-color: #fff;
+}
+
+/* Patient Dashboard Styles */
+#dashboard {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.dashboard-container {
+  border: 1px solid #ddd;
+  padding: 20px;
+  background-color: #fff;
+}
+
+/* Notifications & Reminders Page Styles */
+#notifications {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.notifications-container {
+  border: 1px solid #ddd;
+  padding: 20px;
+  background-color: #fff;
+}
+
+/* Contact & Support Page Styles */
+#contact {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.contact-container {
+  border: 1px solid #ddd;
+  padding: 20px;
+  background-color: #fff;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  width: 100%;
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.switch {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 50px;
+  height: 20px;
+}
+
+.card-switch {
+  height: 400px; /* This height is a bit more than the flip-card to account for potential margins and paddings */
+  position: relative;
+}
+
+.card-side::before {
+  position: absolute;
+  content: "Log in";
+  left: -70px;
+  top: 0;
+  width: 100px;
+  text-decoration: underline;
+  color: var(--font-color);
+  font-weight: 600;
+}
+
+.card-side::after {
+  position: absolute;
+  content: "Sign up";
+  left: 70px;
+  top: 0;
+  width: 100px;
+  text-decoration: none;
+  color: var(--font-color);
+  font-weight: 600;
+}
+
+.toggle {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  box-shadow: 4px 4px var(--main-color);
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--bg-color);
+  transition: 0.3s;
+}
+
+.slider:before {
+  box-sizing: border-box;
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  border: 2px solid var(--main-color);
+  border-radius: 5px;
+  left: -2px;
+  bottom: 2px;
+  background-color: var(--bg-color);
+  box-shadow: 0 3px 0 var(--main-color);
+  transition: 0.3s;
+}
+
+.toggle:checked + .slider {
+  background-color: var(--input-focus);
+}
+
+.toggle:checked + .slider:before {
+  transform: translateX(30px);
+}
+
+.toggle:checked ~ .card-side:before {
+  text-decoration: none;
+}
+
+.toggle:checked ~ .card-side:after {
+  text-decoration: underline;
+}
+
+/* Card Styles */
+.flip-card__inner {
+  width: 300px;
+  height: 350px;
+  position: relative;
+  background-color: transparent;
+  perspective: 1000px;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.toggle:checked ~ .flip-card__inner {
+  transform: rotateY(180deg);
+}
+
+.toggle:checked ~ .flip-card__front {
+  box-shadow: none;
+}
+
+.flip-card__front,
+.flip-card__back {
+  padding: 20px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background: #d0dffc;
+  background: -webkit-linear-gradient(
+    0deg,
+    #d0dffc 0%,
+    rgba(201, 255, 232, 0.64) 50%,
+    #aad3ce 100%
+  );
+  background: linear-gradient(
+    0deg,
+    #d0dffc 0%,
+    rgba(201, 255, 232, 0.64) 50%,
+    #aad3ce 100%
+  );
+  gap: 20px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  box-shadow: 4px 4px var(--main-color);
+  opacity: 0.7;
+}
+
+.flip-card__back {
+  width: 100%;
+  transform: rotateY(180deg);
+}
+
+.flip-card__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.title {
+  margin: 20px 0;
+  font-size: 25px;
+  font-weight: 900;
+  text-align: center;
+  color: var(--main-color);
+}
+
+.flip-card__input {
+  width: 250px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--font-color);
+  padding: 5px 10px;
+  outline: none;
+}
+
+.flip-card__input::placeholder {
+  color: var(--font-color-sub);
+  opacity: 0.8;
+}
+
+.flip-card__input:focus {
+  border: 2px solid var(--input-focus);
+}
+
+.flip-card__btn:active,
+.button-confirm:active {
+  box-shadow: 0px 0px var(--main-color);
+  transform: translate(3px, 3px);
+}
+
+.flip-card__btn {
+  margin: 20px 0;
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--font-color);
+  cursor: pointer;
+}
+
+/* Media Queries */
+@media screen and (max-width: 767px) {
+  nav {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  nav .logo {
+    margin-bottom: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 5px 0;
+  }
+
+  #doctors .doctor-card {
+    width: 90%;
+    margin: 10px auto;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #doctors .doctor-card {
+    width: calc(33% - 40px);
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  #doctors .doctor-card {
+    width: calc(25% - 40px);
+  }
+}

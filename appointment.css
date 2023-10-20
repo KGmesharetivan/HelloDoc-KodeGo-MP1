@@ -1,0 +1,228 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #dce9fb;
+  background: radial-gradient(circle, #dce9fb 0%, #cff3ff 50%, #c8e8ff 100%);
+}
+
+body nav.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav {
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: rgb(166, 213, 215);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav .logo-img {
+  width: 100px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+nav ul li {
+  margin: 0 10px;
+  transition: transform 0.3s;
+}
+
+nav ul li a {
+  color: #000;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+nav ul li:hover {
+  transform: translateY(-2px);
+}
+
+nav ul li a:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+/* Component Styles */
+.shadow__btn {
+  padding: 10px 20px;
+  border: none;
+  font-size: 17px;
+  color: #000;
+  border-radius: 7px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.3s;
+  background: radial-gradient(circle, #dce9fb 0%, #cff3ff 50%, #c8e8ff 100%);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.shadow__btn:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card-header * {
+  list-style-type: none;
+}
+
+.required:after {
+  content: "*";
+  font-weight: bold;
+  color: red;
+  margin-left: 5px;
+}
+
+.card-header {
+  padding: 50px 25px;
+  width: 100%;
+}
+
+.card-header ul {
+  margin: 0;
+  padding: 0;
+}
+
+.card-header ul li {
+  color: white;
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+}
+
+.days {
+  padding: 10px 0;
+}
+
+.days td.active,
+.calendar .days td.active {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+}
+
+.days td.today,
+.calendar .days td.today {
+  background-color: #28a745;
+}
+
+.badge1 {
+  position: relative;
+}
+
+.badge1[data-badge]:after {
+  content: attr(data-badge);
+  position: absolute;
+  top: -0.5px;
+  right: -0.5px;
+  font-size: 0.7em;
+  background: red;
+  color: white;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  line-height: 18px;
+  border-radius: 50%;
+  box-shadow: 0 0 1px #333;
+}
+
+.resized-image {
+  width: 100px; /* Set the width of the image as needed */
+  height: auto; /* Automatically adjust the height to maintain aspect ratio */
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  width: 100%;
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+}
+
+@media screen and (max-width: 720px) {
+  .weekdays td,
+  .days td {
+    width: 13.1%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .weekdays td,
+  .days td {
+    width: 12.5%;
+  }
+
+  .days td.active {
+    padding: 2px;
+  }
+}
+
+@media screen and (max-width: 290px) {
+  .weekdays td,
+  .days td {
+    width: 12.2%;
+  }
+}
+
+/* Media Queries */
+@media screen and (max-width: 767px) {
+  nav {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  nav .logo {
+    margin-bottom: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 5px 0;
+  }
+
+  #doctors .doctor-card {
+    width: 90%;
+    margin: 10px auto;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #doctors .doctor-card {
+    width: calc(33% - 40px);
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  #doctors .doctor-card {
+    width: calc(25% - 40px);
+  }
+}
