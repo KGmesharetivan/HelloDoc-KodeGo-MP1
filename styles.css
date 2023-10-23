@@ -117,7 +117,7 @@ nav ul li a:hover {
   justify-content: space-between;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   .hero__section-A {
     flex-direction: row;
   }
@@ -139,21 +139,18 @@ nav ul li a:hover {
 
 .hero__section-img {
   display: flex;
-  gap: 30px;
+  gap: 3vw;
   justify-content: flex-end;
 }
 
 .hero__section-img-A {
-  margin-top: 30px;
+  margin-top: 3vw;
 }
 
-.img-hero1 {
-  width: 100%;
-}
-
+.img-hero1,
 .img-hero2 {
   width: 100%;
-  margin-bottom: 30px;
+  max-width: 100%;
 }
 
 .text__para {
