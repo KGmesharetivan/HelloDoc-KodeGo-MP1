@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctor Details</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </head>
+
+  <body class="bg-light">
+    <main>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">
+          <img src="Logo.jpg" alt="" class="logo-img" />
+        </a>
+
+        <!-- Menu button (visible on small screens) -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navigation menu (visible on larger screens) -->
+        <div
+          class="collapse navbar-collapse justify-content-center navigation"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav menu">
+            <li class="nav-item">
+              <a class="text-[16px] leading-7 font-[600]" href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="text-[16px] leading-7 font-[600]" href="Doctors.html"
+                >Doctors</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="text-[16px] leading-7 font-[600]" href="#services"
+                >Services</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="text-[16px] leading-7 font-[600]" href="contact.html"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+        <button class="btn btn-primary font-weight-bold rounded-pill">
+          Login
+        </button>
+      </nav>
+      <!-- Navbar End -->
+
+      <!--Find a Doctor -->
+      <section style="background-color: #fff9ea">
+        <div class="container text-center">
+          <h2 class="heading">Find a Doctor</h2>
+          <div class="container mt-5">
+            <div class="row justify-content-center">
+              <div class="col-lg-6">
+                <div
+                  class="input-group rounded"
+                  style="background-color: #0066ff2c"
+                >
+                  <input
+                    type="search"
+                    class="form-control py-4 pl-4 bg-transparent border-0"
+                    placeholder="Search Doctor"
+                    aria-label="Search Doctor"
+                    aria-describedby="search-button"
+                  />
+                  <button class="btn btn-primary rounded-0 rounded-right">
+                    Search
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="mt-5">
+        <div class="container">
+          <div class="testimonial-container">
+            <h2 class="heading text-center">What our patients say</h2>
+            <p class="testimonial-text text-center">
+              World-class care for everyone. Our health System offers unmatched,
+              expert health care.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer class="pb-16 pt-10">
+      <div class="container">
+        <div class="footer-1">
+          <img src="Logo.jpg" class="logo-footer" alt="" />
+          <p class="p-footer">&copy; 2023 ODA. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
