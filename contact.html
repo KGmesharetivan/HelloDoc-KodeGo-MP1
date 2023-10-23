@@ -3,18 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Doctor Page</title>
+    <title>Contact</title>
     <link rel="stylesheet" href="styles.css" />
     <link
-      rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
     />
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Bootstrap JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </head>
-
-  <body class="bg-light">
+  <body>
     <main>
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg">
@@ -69,47 +79,53 @@
       </nav>
       <!-- Navbar End -->
 
-      <!--Find a Doctor -->
-      <section style="background-color: #fff9ea">
-        <div class="container text-center">
-          <h2 class="heading">Find a Doctor</h2>
-          <div class="container mt-5">
-            <div class="row justify-content-center">
-              <div class="col-lg-6">
-                <div
-                  class="input-group rounded"
-                  style="background-color: #0066ff2c"
-                >
-                  <input
-                    type="search"
-                    class="form-control py-4 pl-4 bg-transparent border-0"
-                    placeholder="Search Doctor"
-                    aria-label="Search Doctor"
-                    aria-describedby="search-button"
-                  />
-                  <button class="btn btn-primary rounded-0 rounded-right">
-                    Search
-                  </button>
-                </div>
-              </div>
+      <section>
+        <div class="mt-5"></div>
+        <div class="container px-4 mx-auto max-w-screen-md">
+          <h2 class="heading text-center">Contact Us</h2>
+          <p class="mb-8 lg:mb-16 font-light text-center text__para">
+            Got a technical issue? Want to send feedback about a beta feature?
+            Let us know.
+          </p>
+          <form class="space-y-8">
+            <div class="form-group">
+              <label for="email" class="form__label">Your Email</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="example@gmail.com"
+                class="form__input form-control"
+                value=""
+              />
             </div>
-          </div>
+            <div class="form-group">
+              <label for="subject" class="form__label">Subject</label>
+              <input
+                type="text"
+                id="subject"
+                placeholder="Let us know how we can help you"
+                class="form__input form-control"
+                value=""
+              />
+            </div>
+            <div class="form-group">
+              <label for="message" class="form__label">Your Message</label>
+              <textarea
+                rows="6"
+                type="text"
+                id="message"
+                placeholder="Leave a comment....."
+                class="form__input form-control"
+              ></textarea>
+            </div>
+            <button class="btn btn-primary rounded" type="submit">
+              Submit
+            </button>
+          </form>
         </div>
       </section>
-      <div class="mt-5">
-        <div class="container">
-          <div class="testimonial-container">
-            <h2 class="heading text-center">What our patients say</h2>
-            <p class="testimonial-text text-center">
-              World-class care for everyone. Our health System offers unmatched,
-              expert health care.
-            </p>
-          </div>
-        </div>
-      </div>
     </main>
-    <!-- Footer -->
-    <footer class="pb-16 pt-10">
+    <footer class="pb-16 pt-10 mt-5">
       <div class="container">
         <div class="footer-1">
           <img src="Logo.jpg" class="logo-footer" alt="" />
