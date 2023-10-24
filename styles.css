@@ -408,6 +408,94 @@ footer {
   transform: translateX(5px);
 }
 
+.custom-flex-container {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem; /* You can adjust the gap as needed */
+}
+
+.img-fluid {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.star-icon {
+  width: 20px;
+  height: auto;
+}
+
+.custom-info-container {
+  max-width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.border-bottom {
+  border-width: 2px;
+}
+
+.border-bottom:hover {
+  border-color: #0066ff;
+}
+
+button {
+  padding: 10px 20px;
+}
+
+.custom-list-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+@media (min-width: 576px) {
+  .custom-list-item {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+  }
+}
+
+.custom-date-text {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.custom-details-text {
+  font-size: 16px;
+}
+
+.custom-list-style {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  padding-top: 4px;
+  margin-bottom: 0;
+}
+
+.custom-list-style li {
+  border-radius: 0.25rem;
+  background-color: #fff9ea;
+  padding: 1rem;
+}
+
+.custom-span-style {
+  color: #ffc107;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.custom-p-style {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
 @media (max-width: 768px) {
   .aspect-ratio {
     left: 80%;

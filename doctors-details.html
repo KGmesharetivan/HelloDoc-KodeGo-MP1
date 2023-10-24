@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctors Details</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">
+          <img src="Logo.jpg" alt="" class="logo-img" />
+        </a>
+
+        <!-- Menu button (visible on small screens) -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navigation menu (visible on larger screens) -->
+        <div
+          class="collapse navbar-collapse justify-content-center navigation"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav menu">
+            <li class="nav-item">
+              <a class="text-[16px] leading-7 font-[600]" href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="text-[16px] leading-7 font-[600]" href="doctors.html"
+                >Doctors</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="text-[16px] leading-7 font-[600]" href="services.html"
+                >Services</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="text-[16px] leading-7 font-[600]" href="contact.html"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+        <button
+          class="btn btn-primary font-weight-bold rounded-pill"
+          data-toggle="modal"
+          data-target="#loginModal"
+        >
+          Login
+        </button>
+      </nav>
+      <!-- Navbar End -->
+
+      <section class="mt-3">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="custom-flex-container">
+                <div>
+                  <figure>
+                    <img
+                      src="doctor-img01.png"
+                      class="img-fluid"
+                      alt="Mesharet Ivan Maranga Lorica"
+                    />
+                  </figure>
+                </div>
+                <div class="custom-info-container">
+                  <span class="badge bg-info text-irisBlueColor"
+                    >Orthodontics</span
+                  >
+                  <h3 class="text-headingColor mt-3 font-weight-bold">
+                    Dr. Joe Smith
+                  </h3>
+                  <div class="d-flex align-items-center gap-2 mt-2">
+                    <span class="text-headingColor font-weight-bold"
+                      >Years of Experience: 10</span
+                    >
+                    <img src="Star.png" alt="Star Icon" class="star-icon" />
+                  </div>
+                  <span class="text-textColor mt-2">WinOMS</span>
+                </div>
+              </div>
+
+              <div
+                class="mt-5 border-bottom border-success d-flex justify-content-start align-items-center"
+              >
+                <button
+                  class="border-0 bg-transparent py-2 px-4 mr-4 text-16px text-headingColor font-weight-bold"
+                >
+                  About
+                </button>
+                <button
+                  class="border-0 bg-transparent py-2 px-4 text-16px text-headingColor font-weight-bold"
+                >
+                  Feedback
+                </button>
+              </div>
+
+              <div class="mt-5">
+                <div>
+                  <h3
+                    class="text-[20px] leading-[30px] text-headingColor font-semibold"
+                  >
+                    About
+                    <span
+                      class="text-irisBlueColor font-bold text-[24px] leading-9"
+                      >Dr. Joe Smith</span
+                    >
+                  </h3>
+                  <p class="text__para">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Laudantium odit aspernatur inventore iure quasi! Porro, vel?
+                    Nobis, itaque officiis. Quis consectetur numquam velit odio
+                    rem magnam ipsum, ipsam mollitia eos corrupti eum, fuga
+                    molestias unde consequatur illo sint modi at blanditiis
+                    eaque pariatur dolorem. Recusandae quaerat obcaecati illo
+                    unde nesciunt?
+                  </p>
+                </div>
+                <div class="mt-12">
+                  <h3
+                    class="text-[20px] leading-[30px] text-headingColor font-semibold"
+                  >
+                    Education
+                  </h3>
+                  <ul class="list-unstyled pt-4">
+                    <li class="custom-list-item">
+                      <div class="custom-date">
+                        <span class="text-irisBlueColor custom-date-text"
+                          >June 22, 2011 - October 25, 2013</span
+                        >
+                        <p class="text-textColor custom-details-text">
+                          Industrial Mechatronics
+                        </p>
+                      </div>
+                      <p class="text-textColor custom-details-text">
+                        MFI Institute
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="mt-12">
+                  <h3
+                    class="text-[20px] leading-[30px] text-headingColor font-semibold"
+                  >
+                    Experience
+                  </h3>
+                  <ul class="custom-list-style">
+                    <li class="p-4 rounded bg-custom-bg">
+                      <span class="custom-span-style">
+                        September 13, 2013 - February 15, 2019
+                      </span>
+                      <p class="custom-p-style">Production Line Technician</p>
+                      <p class="custom-p-style">
+                        Toshiba Information Equipment (Philippines), Inc. (TIP)
+                      </p>
+                    </li>
+                    <li class="p-4 rounded bg-custom-bg">
+                      <span class="custom-span-style">
+                        February 26, 2019 - October 17, 2020
+                      </span>
+                      <p class="custom-p-style">
+                        Customer Service Representative
+                      </p>
+                      <p class="custom-p-style">
+                        Concentrix CVG Philippines, Inc.
+                      </p>
+                    </li>
+                    <li class="p-4 rounded bg-custom-bg">
+                      <span class="custom-span-style">
+                        September 13, 2013 - February 15, 2019
+                      </span>
+                      <p class="custom-p-style">
+                        Technical Support Representative
+                      </p>
+                      <p class="custom-p-style">Alorica Philippines, Inc.</p>
+                    </li>
+                    <li class="p-4 rounded bg-custom-bg">
+                      <span class="custom-span-style">
+                        September 13, 2013 - February 15, 2019
+                      </span>
+                      <p class="custom-p-style">
+                        Technical Support Representative
+                      </p>
+                      <p class="custom-p-style">
+                        C3/ CustomerContactChannels (An Everise Company)
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="shadow p-3 lg:p-5 rounded-md">
+                <div class="d-flex justify-content-between">
+                  <p class="text__para mt-0 font-semibold">Ticket Price</p>
+                  <span
+                    class="text-[16px] leading-7 lg:text-[22px] lg:leading-8 text-headingColor font-bold"
+                    >500 PHP</span
+                  >
+                </div>
+                <div class="mt-3">
+                  <p class="text__para mt-0 font-semibold text-headingColor">
+                    Available Time Slots:
+                  </p>
+                  <ul class="list-unstyled mt-3">
+                    <li class="d-flex justify-content-between mb-2">
+                      <p
+                        class="text-[15px] leading-6 text-textColor font-semibold"
+                      >
+                        Sunday
+                      </p>
+                      <p
+                        class="text-[15px] leading-6 text-textColor font-semibold"
+                      >
+                        4:00 PM - 9:30 PM
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                <button class="btn btn-primary w-100 mt-3">
+                  Book Appointment
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="pb-16 pt-10 mt-5">
+      <div class="container">
+        <div class="footer-1">
+          <img src="Logo.jpg" class="logo-footer" alt="" />
+          <p class="p-footer">&copy; 2023 ODA. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Login Modal -->
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      aria-labelledby="loginModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5>Welcome Back !</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- Add your login form fields here -->
+            <form class="form">
+              <p class="form-title">Sign in to your account</p>
+              <div class="input-container">
+                <svg
+                  height="20"
+                  viewBox="0 0 32 32"
+                  width="20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Layer_3" data-name="Layer 3">
+                    <path
+                      d="m30.853 13.87a15 15 0 0 0 -29.729 4.082a15.1 15.1 0 0 0 12.876 12.918a15.6 15.6 0 0 0 2.016.13a14.85 14.85 0 0 0 7.715-2.145a1 1 0 1 0 -1.031-1.711a13.007 13.007 0 1 1 5.458-6.529a2.149 2.149 0 0 1 -4.158-.759v-10.856a1 1 0 0 0 -2 0v1.726a8 8 0 1 0 .2 10.325a4.135 4.135 0 0 0 7.83.274a15.2 15.2 0 0 0 .823-7.455zm-14.853 8.13a6 6 0 1 1 6-6a6.006 6.006 0 0 1 -6 6z"
+                    ></path>
+                  </g>
+                </svg>
+                <input
+                  type="text"
+                  placeholder="Enter username"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <div class="input-container">
+                <svg
+                  height="20"
+                  viewBox="-64 0 512 512"
+                  width="20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m336 512h-288c-26.453125 0-48-21.523438-48-48v-224c0-26.476562 21.546875-48 48-48h288c26.453125 0 48 21.523438 48 48v224c0-26.476562-21.546875-48-48-48zm-288-288c-8.8125 0-16 7.167969-16 16v224c0 8.832031 7.1875 16 16 16h288c8.8125 0-16-7.167969-16-16v-224c0-8.832031-7.1875-16-16-16zm0 0"
+                  ></path>
+                  <path
+                    d="m304 224c-8.832031 0-16-7.167969-16-16v-80c0-52.929688-43.070312-96-96-96s-96 43.070312-96 96v80c0 8.832031-7.167969 16-16 16s-16-7.167969-16-16v-80c0-70.59375 57.40625-128 128-128s128 57.40625 128 128v80c0 8.832031-7.167969 16-16 16zm0 0"
+                  ></path>
+                </svg>
+                <input
+                  type="password"
+                  placeholder="Enter password"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <a href="profile.html" class="submit btn btn-primary"> Login </a>
+              <p class="signup-link">No account? <a href="#">Sign up</a></p>
+            </form>
+            <div><img src="hero-img02.png" alt="" /></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
