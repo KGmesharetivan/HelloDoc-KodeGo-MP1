@@ -398,13 +398,21 @@ footer {
   align-items: center;
 }
 
+@media (max-width: 768px) {
+  .aspect-ratio {
+    left: 80%;
+    transform: translateX(-50%);
+    margin-bottom: -150px;
+  }
+}
+
 @media (min-width: 768px) {
   .footer-1 {
     flex-direction: row;
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1440px) {
   .review {
     margin-top: 70px; /* Margin-top for large screens */
     flex-direction: row;
