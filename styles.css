@@ -10,6 +10,7 @@ body nav.navbar {
   z-index: 10;
 }
 
+/* Main Layout Styles */
 main {
   flex: 1;
 }
@@ -67,6 +68,7 @@ nav ul li a:hover {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
+/* Component Styles */
 .shadow__btn {
   padding: 10px 20px;
   border: none;
@@ -98,19 +100,19 @@ nav ul li a:hover {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding-top: 60px;
+  padding-top: 60px; /* Equivalent to pt-[60px] */
 }
 
 @media (min-width: 1440px) {
   .hero__section {
-    height: 800px;
+    height: 800px; /* Equivalent to 2xl:h-[800px] for screens with min-width: 1440px */
   }
 }
 
 .hero__section-A {
   display: flex;
   flex-direction: column;
-  gap: 90px;
+  gap: 90px; /* Equivalent to gap-[90px] */
   align-items: center;
   justify-content: space-between;
 }
@@ -180,7 +182,7 @@ nav ul li a:hover {
 }
 
 .review {
-  margin-top: 30px;
+  margin-top: 30px; /* Default margin-top */
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -201,12 +203,12 @@ nav ul li a:hover {
 
 footer {
   margin-top: auto;
-  background-color: #f8f9fa;
+  background-color: #f8f9fa; /* Add your desired background color */
 }
 
 .Footer {
-  padding-bottom: 1rem;
-  padding-top: 0.625rem;
+  padding-bottom: 1rem; /* Equivalent to 16px */
+  padding-top: 0.625rem; /* Equivalent to 10px */
 }
 
 .footer-1 {
@@ -226,10 +228,10 @@ footer {
 
 .p-footer {
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.5; /* Equivalent to leading-7 in this context */
   font-weight: 400;
-  color: #000;
-  margin-top: 1rem;
+  color: #000; /* Assuming --textColor is a custom CSS variable for text color */
+  margin-top: 1rem; /* Equivalent to mt-4 (assuming 1rem is the base font size) */
 }
 
 .search-box {
@@ -259,7 +261,6 @@ footer {
   width: 600px !important;
   height: 500px !important;
 }
-
 .modal-body {
   display: flex;
   flex-direction: column;
@@ -268,7 +269,7 @@ footer {
 }
 
 .modal.fade.show {
-  display: block;
+  display: block; /* Set display to block when modal is open */
 }
 
 .modal.fade.show .modal-backdrop {
@@ -279,6 +280,7 @@ footer {
   z-index: 1040;
 }
 
+/* For larger screens */
 @media (min-width: 992px) {
   .modal-body {
     flex-direction: row;
@@ -302,7 +304,7 @@ footer {
 .input-container {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 10px; /* Adjust margin as needed */
 }
 
 .input-container svg {
@@ -346,7 +348,23 @@ footer {
   text-decoration: underline;
 }
 
-@media (max-width: 767px) {
+@media (min-width: 768px) {
+  .footer-1 {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 992px) {
+  .review {
+    margin-top: 70px; /* Margin-top for large screens */
+    flex-direction: row;
+    align-items: center;
+    gap: 30px; /* Gap between items for large screens */
+  }
+}
+
+/* Media Queries */
+@media screen and (max-width: 767px) {
   nav {
     flex-direction: column;
     padding: 10px;
