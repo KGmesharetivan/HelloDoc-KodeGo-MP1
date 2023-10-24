@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Profile</title>
+    <title>Online Doctor Appointment</title>
     <link rel="stylesheet" href="styles.css" />
     <link
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -11,13 +11,15 @@
     />
     <!-- Bootstrap CSS -->
     <link
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+
+    <!-- Bootstrap JS and Popper.js (Order matters!) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   </head>
   <body>
     <main>
-      <!-- Navbar -->
       <nav class="navbar navbar-expand-lg">
         <a class="navbar-brand" href="#">
           <img src="Logo.jpg" alt="" class="logo-img" />
@@ -25,6 +27,7 @@
 
         <!-- Menu button (visible on small screens) -->
         <button
+          id="menu-button"
           class="navbar-toggler"
           type="button"
           data-toggle="collapse"
@@ -36,7 +39,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- Navigation menu (visible on larger screens) -->
+        <!-- Navigation menu -->
         <div
           class="collapse navbar-collapse justify-content-center navigation"
           id="navbarNav"
@@ -117,7 +120,7 @@
     </main>
 
     <!-- Footer Section -->
-    <footer class="pb-16 pt-10">
+    <footer class="pb-16 pt-10 mt-5">
       <div class="container">
         <div class="footer-1">
           <img src="Logo.jpg" class="logo-footer" alt="" />
@@ -135,5 +138,15 @@
 
     <!-- Bootstrap JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuButton = document.getElementById("menu-button");
+        const navigation = document.querySelector(".navigation");
+
+        menuButton.addEventListener("click", function () {
+          navigation.classList.toggle("show__menu");
+        });
+      });
+    </script>
   </body>
 </html>
