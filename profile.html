@@ -3,15 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Online Doctor Appointment</title>
+    <title>Profile</title>
     <link rel="stylesheet" href="styles.css" />
     <link
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
 
@@ -20,6 +15,7 @@
   </head>
   <body>
     <main>
+      <!-- Navbar -->
       <nav class="navbar navbar-expand-lg">
         <a class="navbar-brand" href="#">
           <img src="Logo.jpg" alt="" class="logo-img" />
@@ -27,7 +23,6 @@
 
         <!-- Menu button (visible on small screens) -->
         <button
-          id="menu-button"
           class="navbar-toggler"
           type="button"
           data-toggle="collapse"
@@ -39,7 +34,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- Navigation menu -->
+        <!-- Navigation menu (visible on larger screens) -->
         <div
           class="collapse navbar-collapse justify-content-center navigation"
           id="navbarNav"
@@ -138,15 +133,5 @@
 
     <!-- Bootstrap JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const menuButton = document.getElementById("menu-button");
-        const navigation = document.querySelector(".navigation");
-
-        menuButton.addEventListener("click", function () {
-          navigation.classList.toggle("show__menu");
-        });
-      });
-    </script>
   </body>
 </html>
