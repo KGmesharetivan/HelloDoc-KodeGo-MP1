@@ -398,6 +398,16 @@ footer {
   align-items: center;
 }
 
+.btn-1 svg {
+  width: 34px;
+  margin-left: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.btn-1:hover svg {
+  transform: translateX(5px);
+}
+
 @media (max-width: 768px) {
   .aspect-ratio {
     left: 80%;
