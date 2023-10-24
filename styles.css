@@ -487,8 +487,6 @@ button {
   line-height: 1.5;
 }
 
-
-
 @media (min-width: 576px) {
   .custom-list-item {
     flex-direction: row;
@@ -514,14 +512,12 @@ button {
 
 @media (min-width: 1440px) {
   .review {
-    margin-top: 70px; /* Margin-top for large screens */
+    margin-top: 70px;
     flex-direction: row;
     align-items: center;
-    gap: 30px; /* Gap between items for large screens */
+    gap: 30px;
   }
 }
-
-/* Media Queries */
 @media screen and (max-width: 767px) {
   nav {
     flex-direction: column;
