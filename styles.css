@@ -10,7 +10,6 @@ body nav.navbar {
   z-index: 10;
 }
 
-/* Main Layout Styles */
 main {
   flex: 1;
 }
@@ -68,7 +67,6 @@ nav ul li a:hover {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-/* Component Styles */
 .shadow__btn {
   padding: 10px 20px;
   border: none;
@@ -100,19 +98,19 @@ nav ul li a:hover {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding-top: 60px; /* Equivalent to pt-[60px] */
+  padding-top: 60px;
 }
 
 @media (min-width: 1440px) {
   .hero__section {
-    height: 800px; /* Equivalent to 2xl:h-[800px] for screens with min-width: 1440px */
+    height: 800px;
   }
 }
 
 .hero__section-A {
   display: flex;
   flex-direction: column;
-  gap: 90px; /* Equivalent to gap-[90px] */
+  gap: 90px;
   align-items: center;
   justify-content: space-between;
 }
@@ -182,7 +180,7 @@ nav ul li a:hover {
 }
 
 .review {
-  margin-top: 30px; /* Default margin-top */
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -203,12 +201,12 @@ nav ul li a:hover {
 
 footer {
   margin-top: auto;
-  background-color: #f8f9fa; /* Add your desired background color */
+  background-color: #f8f9fa;
 }
 
 .Footer {
-  padding-bottom: 1rem; /* Equivalent to 16px */
-  padding-top: 0.625rem; /* Equivalent to 10px */
+  padding-bottom: 1rem;
+  padding-top: 0.625rem;
 }
 
 .footer-1 {
@@ -228,10 +226,10 @@ footer {
 
 .p-footer {
   font-size: 16px;
-  line-height: 1.5; /* Equivalent to leading-7 in this context */
+  line-height: 1.5;
   font-weight: 400;
-  color: #000; /* Assuming --textColor is a custom CSS variable for text color */
-  margin-top: 1rem; /* Equivalent to mt-4 (assuming 1rem is the base font size) */
+  color: #000;
+  margin-top: 1rem;
 }
 
 .search-box {
@@ -244,23 +242,111 @@ footer {
   border-radius: 0;
 }
 
-@media (min-width: 768px) {
-  .footer-1 {
-    flex-direction: row;
-  }
+.modal-dialog {
+  position: fixed;
+  top: 12% !important;
+  transform: translate(-50%, -50%);
+  max-width: 400px;
+  width: 100%;
+  z-index: 1050;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  width: 600px !important;
+  height: 500px !important;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.modal.fade.show {
+  display: block;
+}
+
+.modal.fade.show .modal-backdrop {
+  display: none;
+}
+
+.modal-backdrop {
+  z-index: 1040;
 }
 
 @media (min-width: 992px) {
-  .review {
-    margin-top: 70px; /* Margin-top for large screens */
+  .modal-body {
     flex-direction: row;
-    align-items: center;
-    gap: 30px; /* Gap between items for large screens */
   }
 }
 
-/* Media Queries */
-@media screen and (max-width: 767px) {
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-title {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  text-align: center;
+  color: #000;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.input-container svg {
+  margin-right: 10px;
+}
+
+.input-container input[type="text"],
+.input-container input[type="password"] {
+  flex: 1;
+  outline: none;
+  border: 1px solid #e5e7eb;
+  background-color: #fff;
+  padding: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.submit {
+  outline: none;
+  background-color: #4f46e5;
+  color: #ffffff;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.signup-link {
+  margin-top: 10px;
+  color: #6b7280;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  text-align: center;
+}
+
+.signup-link a {
+  text-decoration: underline;
+}
+
+@media (max-width: 767px) {
   nav {
     flex-direction: column;
     padding: 10px;
