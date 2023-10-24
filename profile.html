@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">
+          <img src="Logo.jpg" alt="" class="logo-img" />
+        </a>
+
+        <!-- Menu button (visible on small screens) -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navigation menu (visible on larger screens) -->
+        <div
+          class="collapse navbar-collapse justify-content-center navigation"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav menu">
+            <li class="nav-item">
+              <a class="text-[16px] leading-7 font-[600]" href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="text-[16px] leading-7 font-[600]" href="doctors.html"
+                >Doctors</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="text-[16px] leading-7 font-[600]" href="services.html"
+                >Services</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="text-[16px] leading-7 font-[600]" href="contact.html"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- Avatar -->
+        <div class="ms-3">
+          <!-- Adjust the margin as needed -->
+          <img src="avatar-icon.png" alt="" class="avatar-img" />
+        </div>
+      </nav>
+      <!-- Navbar End -->
+
+      <!-- Profile Section -->
+      <section>
+        <div class="container">
+          <div class="row gap-2 gap-md-4 flex-column flex-md-row">
+            <div class="col-12 col-md-6 order-2 order-md-1 text-center">
+              <div class="aspect-ratio">
+                <img src="avatar-icon.png" alt="" class="rounded-full" />
+              </div>
+              <div class="info">
+                <h4 class="h5 mb-compact">John Smith</h4>
+                <p class="mb-compact">Email: johnsmith@gmail.com</p>
+                <p class="mb-compact">Phone: +1 125 254 2547</p>
+                <p class="mb-compact mb-5">Gender: Male</p>
+                <button class="btn btn-dark btn-sm rounded-pill mb-2">
+                  Logout
+                </button>
+                <button class="btn btn-danger btn-sm rounded-pill">
+                  Delete Account
+                </button>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 order-1 order-md-2 mt-5">
+              <div class="d-flex mb-compact">
+                <button
+                  class="btn btn-outline-primary btn-sm rounded-pill me-2"
+                >
+                  My Bookings
+                </button>
+                <button class="btn btn-outline-secondary btn-sm rounded-pill">
+                  Settings
+                </button>
+              </div>
+              <div class="container mb-compact">
+                <div class="mt-5">
+                  <h4>No Book Appointment</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Profile Section End -->
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="pb-16 pt-10">
+      <div class="container">
+        <div class="footer-1">
+          <img src="Logo.jpg" class="logo-footer" alt="" />
+          <p class="p-footer">&copy; 2023 ODA. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

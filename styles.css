@@ -348,6 +348,56 @@ footer {
   text-decoration: underline;
 }
 
+.rounded-full {
+  width: 80px;
+  height: 80px;
+}
+
+.btn-sm {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+}
+
+.mb-compact {
+  margin-bottom: 0.5rem;
+}
+
+.mb-compact > button {
+  margin-right: 1rem;
+}
+
+.avatar-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.aspect-ratio {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  position: relative;
+  margin-top: 20px;
+  left: 30%;
+  margin-bottom: -250px;
+}
+
+.aspect-ratio > img {
+  width: 25%;
+  height: 25%;
+  object-fit: cover;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  border-radius: 50%;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 @media (min-width: 768px) {
   .footer-1 {
     flex-direction: row;
