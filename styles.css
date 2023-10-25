@@ -487,6 +487,38 @@ button {
   line-height: 1.5;
 }
 
+.horizontal-align {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .col-md-6 {
+    width: 100%;
+  }
+  .horizontal-align {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .horizontal-align {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .col-md-6 {
+    width: 100%;
+  }
+}
+
 @media (min-width: 576px) {
   .custom-list-item {
     flex-direction: row;
