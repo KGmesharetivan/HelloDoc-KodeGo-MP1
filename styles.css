@@ -505,6 +505,52 @@ button {
   width: 100%;
 }
 
+/* Calendar Column Styles */
+
+/* Calendar Card Styles */
+.calendar .card-header {
+  background-color: #007bff;
+}
+
+/* Month and Year Text Styles */
+.calendar #month,
+.calendar #year {
+  font-size: 1.5rem;
+}
+
+/* Weekdays Header Styles */
+.calendar .weekdays th {
+  background-color: #343a40;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* Days Styles */
+.calendar .days td {
+  text-align: center;
+  padding: 10px;
+}
+
+/* Highlight Today's Date */
+.calendar .days td.today {
+  background-color: #007bff;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* Highlight Selected Date */
+.calendar .days td.selected {
+  background-color: #28a745;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* Hover Effect on Days */
+.calendar .days td:hover {
+  background-color: #f8f9fa;
+  cursor: pointer;
+}
+
 @media (max-width: 992px) {
   .col-md-6 {
     width: 100%;

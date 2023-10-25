@@ -8,12 +8,16 @@ $(function () {
     for (var i = 0; i < 24; i++) {
       var hour = i < 10 ? "0" + i : i;
 
-      var option = document.createElement("option");
-      option.value = hour + ":00";
-      option.text = hour + ":00";
+      var optionStart = document.createElement("option");
+      optionStart.value = hour + ":00";
+      optionStart.text = hour + ":00";
 
-      startTimeDropdown.appendChild(option);
-      endTimeDropdown.appendChild(option.cloneNode(true));
+      var optionEnd = document.createElement("option");
+      optionEnd.value = hour + ":00";
+      optionEnd.text = hour + ":00";
+
+      startTimeDropdown.appendChild(optionStart);
+      endTimeDropdown.appendChild(optionEnd);
     }
   }
 
@@ -46,35 +50,35 @@ $(function () {
     });
   }
 
-  $("#description").inputmask("Regex", {
-    regex: "(?:[\\w\\d]+(\\s)*){1,5}",
-    clearIncomplete: true,
-  });
+  // $("#description").inputmask("Regex", {
+  //   regex: "(?:[\\w\\d]+(\\s)*){1,5}",
+  //   clearIncomplete: true,
+  // });
 
-  $("#start_time").inputmask("hh:mm", {
-    placeholder: "hh:mm (24h)",
-    alias: "datetime",
-    clearIncomplete: true,
-    oncomplete: function () {
-      $("#end_time").focus();
-    },
-  });
+  // $("#start_time").inputmask("hh:mm", {
+  //   placeholder: "hh:mm (24h)",
+  //   alias: "datetime",
+  //   clearIncomplete: true,
+  //   oncomplete: function () {
+  //     $("#end_time").focus();
+  //   },
+  // });
 
-  $("#end_time").inputmask("hh:mm", {
-    placeholder: "hh:mm (24h)",
-    alias: "datetime",
-    clearIncomplete: true,
-    oncomplete: function () {
-      compare();
-      $("#submit").focus();
-    },
-  });
+  // $("#end_time").inputmask("hh:mm", {
+  //   placeholder: "hh:mm (24h)",
+  //   alias: "datetime",
+  //   clearIncomplete: true,
+  //   oncomplete: function () {
+  //     compare();
+  //     $("#submit").focus();
+  //   },
+  // });
 
-  $(".date-input").inputmask("dd/mm/yyyy", {
-    placeholder: "dd/mm/yyyy",
-    alias: "datetime",
-    clearIncomplete: true,
-  });
+  // $(".date-input").inputmask("dd/mm/yyyy", {
+  //   placeholder: "dd/mm/yyyy",
+  //   alias: "datetime",
+  //   clearIncomplete: true,
+  // });
 
   $('[data-toggle="popover"]').popover();
 
@@ -232,35 +236,45 @@ $("#days td.inactive").on("click", function () {
 
 function make_appointment() {
   if (is_empty() == false) {
-    is_past_date();
-    compare();
-    if (is_overlap() == false) {
-      var appointment = {
-        id:
-          $("#date").inputmask("unmaskedvalue") +
-          $("#start_time").inputmask("unmaskedvalue") +
-          $("#end_time").inputmask("unmaskedvalue"),
-        date: $("#date").val(),
-        description: $("#description").val(),
-        start_time: $("#start_time").val(),
-        end_time: $("#end_time").val(),
-      };
+    if (is_past_date() == false) {
+      compare();
+      if (is_overlap() == false) {
+        var appointment = {
+          id:
+            $("#date").inputmask("unmaskedvalue") +
+            $("#start_time").inputmask("unmaskedvalue") +
+            $("#end_time").inputmask("unmaskedvalue"),
+          date: $("#date").val(),
+          description: $("#description").val(),
+          start_time: $("#start_time").val(),
+          end_time: $("#end_time").val(),
+        };
 
-      SaveDataToLocalStorage(appointment);
-      $("#btn_clear_storage").prop("disabled", false);
-      $(`#btn_clear_storage`).show();
-      print();
+        SaveDataToLocalStorage(appointment);
+        $("#btn_clear_storage").prop("disabled", false);
+        $(`#btn_clear_storage`).show();
+        print();
 
-      clear_input();
-      iziToast.success({
-        title: "Success",
-        message: "Appointment created",
-      });
+        clear_input();
+        iziToast.success({
+          title: "Success",
+          message: "Appointment created",
+        });
+      } else {
+        clear_input();
+        iziToast.error({
+          title: "Error",
+          message: "This appointment is overlapping another one",
+          overlay: true,
+          zindex: 999,
+          position: "center",
+          timeout: 3000,
+        });
+      }
     } else {
-      clear_input();
       iziToast.error({
         title: "Error",
-        message: "This appointment is overlaping another one",
+        message: "Selected date is in the past",
         overlay: true,
         zindex: 999,
         position: "center",
@@ -279,9 +293,9 @@ function make_appointment() {
   }
 }
 
-$("#end_time, #start_time").focusout(function () {
-  compare();
-});
+// $("#end_time, #start_time").focusout(function () {
+//   compare();
+// });
 
 $("#end_time, #start_time, #date").keyup(function () {
   if (is_empty() == true) {
@@ -541,24 +555,25 @@ function delete_appointment(id) {
 }
 
 function put_badges_new(cell) {
-  var data = localStorage.getItem("tbAppointment");
-  data = JSON.parse(data);
-  if (data[0] !== null) {
-    let counter = 0;
-    for (let i = 0; i < data.length; i++) {
-      const element = data[i];
-      if (cell.getAttribute("data-day") == element.date.slice(0, 2)) {
-        counter++;
+  if (cell && cell.getAttribute("data-day")) {
+    var data = localStorage.getItem("tbAppointment");
+    data = JSON.parse(data);
+    if (data[0] !== null) {
+      let counter = 0;
+      for (let i = 0; i < data.length; i++) {
+        const element = data[i];
+        if (cell.getAttribute("data-day") == element.date.slice(0, 2)) {
+          counter++;
+        }
       }
-    }
 
-    if (counter >= 1) {
-      cell.classList.add("badge1");
-      cell.setAttribute("data-badge", counter);
-    }
-    if (counter <= 0) {
-      cell.classList.remove("badge1");
-      cell.removeAttribute("data-badge");
+      if (counter >= 1) {
+        cell.classList.add("badge1");
+        cell.setAttribute("data-badge", counter);
+      } else {
+        cell.classList.remove("badge1");
+        cell.removeAttribute("data-badge");
+      }
     }
   }
 }
