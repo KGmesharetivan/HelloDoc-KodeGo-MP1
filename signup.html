@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Online Doctor Appointment</title>
+    <title>Signup Page</title>
     <link rel="stylesheet" href="styles.css" />
     <link
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -77,65 +77,146 @@
       </nav>
       <!-- Navbar End -->
 
-      <!-- Home Section -->
-      <section class="hero__section">
-        <div class="container">
-          <div class="hero__section-A">
-            <!-- ==== hero content ===== -->
-            <div class="col">
-              <h1 class="hero__section-B">
-                We help patients live a healthy, longer life.
-              </h1>
-              <p class="text__para mb-5">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Laudantium exercitationem quod distinctio in architecto eaque
-                provident? Laudantium enim nobis similique placeat esse
-                veritatis error, deserunt accusantium tempore officiis a ex!
-              </p>
-              <button class="btn btn-primary font-weight-bold rounded-pill">
-                Request an Appointment
-              </button>
-              <!-- === hero content ==== -->
-              <div class="review">
-                <div class="text-start mt-4">
-                  <h2 class="display-4 font-weight-bold text-headingColor mb-0">
-                    30+
-                  </h2>
-                  <span class="yellowColor"></span>
-                  <p class="text__para">Years of Experience</p>
-                </div>
-                <div class="text-start">
-                  <h2 class="display-4 font-weight-bold text-headingColor mb-0">
-                    15+
-                  </h2>
-                  <span class="purpleColor"></span>
-                  <p class="text__para">Clinic Locatioon</p>
-                </div>
-                <div class="text-start">
-                  <h2 class="display-4 font-weight-bold text-headingColor mb-0">
-                    100%
-                  </h2>
-                  <span class="irisBlueColor"></span>
-                  <p class="text__para">Patient Satisfaction</p>
-                </div>
-              </div>
+      <section>
+        <div class="container signup-container">
+          <div class="row">
+            <div class="col-lg-6">
+              <img
+                src="signup-img.jpg"
+                alt="Signup Image"
+                class="img-fluid w-100"
+              />
             </div>
-
-            <div class="hero__section-img">
-              <div>
-                <img src="./hero-img01.png" class="w-full" alt="" />
-              </div>
-              <div class="mt-3">
-                <img src="./hero-img02.png" class="w-full mb-3" alt="" />
-                <img src="./hero-img03.png" class="w-full" alt="" />
-              </div>
+            <div class="col-lg-6">
+              <h2 class="text-primary mb-3">Register your account</h2>
+              <p class="text-gray-700 mb-4">
+                Signup now and get full access to our app.
+              </p>
+              <form>
+                <div class="mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="fullname"
+                    name="fullname"
+                    placeholder="Enter your full name"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="password"
+                    name="password"
+                    placeholder="Enter your password"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="phone"
+                    name="phone"
+                    placeholder="Enter your phone number"
+                    required
+                  />
+                </div>
+                <div class="container custom-container">
+                  <div class="custom-form-container">
+                    <div class="mb-4">
+                      <label
+                        for="role"
+                        class="text-headingColor font-bold mb-2 block"
+                        >Are you a:</label
+                      >
+                      <select
+                        id="role"
+                        name="role"
+                        class="w-full border border-solid border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-primaryColor"
+                        required=""
+                      >
+                        <option value="patient">Patient</option>
+                        <option value="doctor">Doctor</option>
+                      </select>
+                    </div>
+                    <div class="mb-4">
+                      <span class="text-headingColor font-bold mb-2 block"
+                        >Gender</span
+                      >
+                      <div class="flex items-center gap-5">
+                        <label for="Male" class="flex items-center gap-2">
+                          <input
+                            type="radio"
+                            id="Male"
+                            name="gender"
+                            required=""
+                            value="Male"
+                          />
+                          <span>Male</span>
+                        </label>
+                        <label for="Female" class="flex items-center gap-2">
+                          <input
+                            type="radio"
+                            id="Female"
+                            name="gender"
+                            required=""
+                            value="Female"
+                          />
+                          <span>Female</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="custom-file-upload mb-4">
+                    <label for="profilePic" class="flex items-center gap-25">
+                      <img
+                        src="profile.png"
+                        alt="Profile Pic"
+                        class="object-cover w-52 h-52 rounded-full border-blue-500 border-2"
+                      />
+                      <div class="custom-upload-button">
+                        <span class="upload-text">Upload Photo</span>
+                      </div>
+                    </label>
+                    <input
+                      type="file"
+                      id="profilePic"
+                      name="profilePic"
+                      style="display: none"
+                    />
+                  </div>
+                </div>
+                <div class="custom-button-container">
+                  <button type="submit" class="custom-button">Sign Up</button>
+                </div>
+              </form>
+              <p class="text-center mt-3">
+                Already have an account?
+                <a
+                  href=""
+                  class="text-primary"
+                  data-toggle="modal"
+                  data-target="#loginModal"
+                  >Log in here</a
+                >
+              </p>
             </div>
           </div>
         </div>
       </section>
-      <!-- Home Section End -->
     </main>
-
     <!-- Footer Section -->
     <footer class="pb-16 pt-10 mt-5">
       <div class="container">
@@ -217,9 +298,7 @@
                 Login
               </a>
               <!-- <button type="submit" class="submit btn btn-primary" required> Login </button> -->
-              <p class="signup-link">
-                No account? <a href="signup.html">Sign up</a>
-              </p>
+              <p class="signup-link">No account? <a href="#">Sign up</a></p>
             </form>
             <div><img src="hero-img02.png" alt="" /></div>
           </div>
