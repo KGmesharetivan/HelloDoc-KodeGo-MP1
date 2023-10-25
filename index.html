@@ -213,7 +213,10 @@
                   required
                 />
               </div>
-              <a href="profile.html" class="submit btn btn-primary"> Login </a>
+              <a href="profile.html" class="submit btn btn-primary" required>
+                Login
+              </a>
+              <!-- <button type="submit" class="submit btn btn-primary" required> Login </button> -->
               <p class="signup-link">No account? <a href="#">Sign up</a></p>
             </form>
             <div><img src="hero-img02.png" alt="" /></div>
@@ -240,6 +243,30 @@
           navigation.classList.toggle("show__menu");
         });
       });
+    </script>
+    <script>
+      document
+        .querySelector(".form")
+        .addEventListener("submit", function (event) {
+          var usernameInput = document.querySelector('input[type="text"]');
+          var passwordInput = document.querySelector('input[type="password"]');
+
+          if (!usernameInput.value || !passwordInput.value) {
+            event.preventDefault();
+
+            if (!usernameInput.value) {
+              usernameInput.setCustomValidity("Username is required.");
+            } else {
+              usernameInput.setCustomValidity("");
+            }
+
+            if (!passwordInput.value) {
+              passwordInput.setCustomValidity("Password is required.");
+            } else {
+              passwordInput.setCustomValidity("");
+            }
+          }
+        });
     </script>
   </body>
 </html>
