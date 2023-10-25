@@ -387,6 +387,10 @@ footer {
   height: 80px;
 }
 
+.rounded-full img {
+  display: block;
+}
+
 .btn-sm {
   padding: 0.25rem 0.75rem;
   font-size: 0.75rem;
@@ -576,6 +580,53 @@ button {
 .calendar .days td:hover {
   background-color: #f8f9fa;
   cursor: pointer;
+}
+
+.profile-info,
+.profile-actions {
+  background-color: #ffffff;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  left: 0;
+}
+
+.profile-picture img {
+  width: 100px;
+  height: 100px;
+}
+
+@media (min-width: 576px) {
+  .profile-info,
+  .profile-actions {
+    padding: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .profile-info,
+  .profile-actions {
+    padding: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .profile-info {
+    width: 70%;
+    padding: 25px;
+  }
+
+  .profile-actions {
+    width: 30%;
+    padding: 25px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .profile-info,
+  .profile-actions {
+    padding: 30px;
+  }
 }
 
 @media (max-width: 992px) {
