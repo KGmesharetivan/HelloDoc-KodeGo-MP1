@@ -258,8 +258,8 @@ footer {
   padding: 1rem;
   border-radius: 0.5rem;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-  width: 600px !important;
-  height: 500px !important;
+  width: 550px !important;
+  height: 450px !important;
 }
 .modal-body {
   display: flex;
@@ -268,8 +268,14 @@ footer {
   gap: 1rem;
 }
 
+.modal-body img {
+  max-width: 100%;
+  height: auto;
+  width: auto\9;
+}
+
 .modal.fade.show {
-  display: block; /* Set display to block when modal is open */
+  display: block;
 }
 
 .modal.fade.show .modal-backdrop {
@@ -280,10 +286,11 @@ footer {
   z-index: 1040;
 }
 
-/* For larger screens */
-@media (min-width: 992px) {
+@media (min-width: 576px) {
   .modal-body {
     flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
   }
 }
 
