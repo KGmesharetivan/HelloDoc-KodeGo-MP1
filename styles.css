@@ -631,13 +631,11 @@ button {
 .profile-info,
 .profile-actions {
   padding: 20px;
-  border-radius: 10px;
-  left: 0;
 }
 
 .profile-picture img {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
 }
 
 .signup-container {
@@ -760,33 +758,56 @@ button {
 @media (min-width: 576px) {
   .profile-info,
   .profile-actions {
-    padding: 15px;
+    padding: 20px;
+  }
+
+  .profile-picture img {
+    width: 150px;
+    height: 150px;
   }
 }
 
 @media (min-width: 768px) {
   .profile-info,
   .profile-actions {
-    padding: 20px;
+    padding: 25px;
+  }
+
+  .profile-picture img {
+    width: 180px;
+    height: 180px;
   }
 }
 
 @media (min-width: 992px) {
   .profile-info {
-    width: 70%;
-    padding: 25px;
+    width: 60%;
+    padding: 30px;
   }
 
   .profile-actions {
-    width: 30%;
-    padding: 25px;
+    width: 40%;
+    padding: 30px;
+  }
+
+  .profile-picture img {
+    width: 200px;
+    height: 200px;
   }
 }
 
 @media (min-width: 1200px) {
-  .profile-info,
+  .profile-info {
+    width: 50%;
+  }
+
   .profile-actions {
-    padding: 30px;
+    width: 50%;
+  }
+
+  .profile-picture img {
+    width: 250px;
+    height: 250px;
   }
 }
 
