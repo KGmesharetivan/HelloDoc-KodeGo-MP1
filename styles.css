@@ -147,6 +147,19 @@ nav ul li a:hover {
   margin-top: 3vw;
 }
 
+@media (max-width: 768px) {
+  .hero__section-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .hero__section-img-A {
+    margin-top: 20px;
+  }
+}
+
 .img-hero1,
 .img-hero2 {
   width: 100%;
