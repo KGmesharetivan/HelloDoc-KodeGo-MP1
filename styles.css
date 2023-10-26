@@ -247,20 +247,9 @@ nav ul li a:hover {
   border: 1px solid #ced4da;
 }
 
-footer {
-  margin-top: auto;
-  background-color: #f8f9fa; /* Add your desired background color */
-}
-
-.Footer {
-  padding-bottom: 1rem; /* Equivalent to 16px */
-  padding-top: 0.625rem; /* Equivalent to 10px */
-}
-
 .footer-1 {
   display: flex;
   justify-content: center;
-  flex-direction: column;
   flex-wrap: wrap;
   background-image: url("./mask.png");
   gap: 30px;
