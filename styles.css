@@ -149,13 +149,12 @@ nav ul li a:hover {
 
 @media (max-width: 576px) {
   .hero__section-img {
+    display: flex;
     flex-direction: column;
-    gap: 1rem;
-    justify-content: center;
   }
 
-  .hero__section-img-A {
-    margin-top: 1rem;
+  .hero__section-img img {
+    width: 100%;
   }
 }
 
@@ -738,6 +737,16 @@ button {
 .custom-button:hover {
   background-color: #ccc;
   color: black;
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .row-cols-sm-2 > .col,
+  .center-content {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
 }
 
 @media (max-width: 576px) {
