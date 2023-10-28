@@ -739,6 +739,8 @@ button {
   color: black;
 }
 
+
+
 @media (min-width: 576px) and (max-width: 768px) {
   .row-cols-sm-2 > .col,
   .center-content {
