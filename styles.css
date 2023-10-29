@@ -184,13 +184,7 @@ nav ul li a:hover {
 }
 
 .footer-1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
   background: url("./mask.png") center/cover no-repeat;
-  gap: 30px;
-  color: #000;
 }
 
 .logo-footer {
