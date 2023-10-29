@@ -757,7 +757,6 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 1rem;
 }
 
 @media (min-width: 576px) and (max-width: 768px) {
