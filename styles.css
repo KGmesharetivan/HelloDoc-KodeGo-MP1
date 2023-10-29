@@ -723,9 +723,6 @@ button {
     margin-right: 25px;
   }
 
-  .center-content {
-    margin-left: 50px;
-  }
   .signup-container {
     margin-top: 20px;
   }
@@ -760,6 +757,13 @@ button {
 
   .hero__section-img img {
     width: 100%;
+  }
+  .row-cols-sm-2 > .col,
+  .center-content {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+    justify-content: center;
   }
 }
 
@@ -818,7 +822,7 @@ button {
   .hero__section-img {
     flex-direction: row;
     justify-content: flex-start;
-    margin-right: 35px;
+    margin-right: 50px;
   }
 
   .hero__section-img-A {
