@@ -100,13 +100,13 @@ nav ul li a:hover {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding-top: 60px; /* Equivalent to pt-[60px] */
+  padding-top: 60px;
 }
 
 .hero__section-A {
   display: flex;
   flex-direction: column;
-  gap: 90px; /* Equivalent to gap-[90px] */
+  gap: 90px;
   align-items: center;
   justify-content: space-between;
 }
@@ -781,6 +781,9 @@ button {
     border-bottom: none !important;
     display: flex;
   }
+  .calendar {
+    left: 4% !important;
+  }
 }
 
 @media (min-width: 576px) and (max-width: 768px) {
@@ -995,6 +998,14 @@ button {
   .custom-form-container {
     flex-direction: row;
   }
+  .hero__section {
+    background-image: url("./hero-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 60px;
+    height: 1350px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -1030,6 +1041,9 @@ button {
   }
   .hero__section-A {
     flex-direction: row;
+  }
+  .hero__section-img {
+    margin-left: 0;
   }
 }
 @media screen and (max-width: 992px) {
