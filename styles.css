@@ -552,12 +552,6 @@ button {
   justify-content: space-between;
 }
 
-@media (min-width: 992px) {
-  .custom-form-container {
-    flex-direction: row;
-  }
-}
-
 .custom-file-upload {
   display: flex;
   flex-direction: column;
@@ -933,6 +927,13 @@ button {
     flex-direction: column;
   }
 
+  .custom-list-item {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+  }
+
   .custom-span-style,
   .custom-p-style {
     margin-bottom: 5px;
@@ -984,6 +985,15 @@ button {
   }
   .custom-margin-right {
     margin-right: 30%;
+  }
+  .custom-list-item {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+  }
+  .custom-form-container {
+    flex-direction: row;
   }
 }
 
