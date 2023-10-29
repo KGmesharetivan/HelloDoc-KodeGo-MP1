@@ -229,6 +229,7 @@ nav ul li a:hover {
 .modal-dialog {
   position: fixed;
   top: 12% !important;
+  left: 3% !important;
   transform: translate(-50%, -50%);
   max-width: 90%;
   width: 100%;
