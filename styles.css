@@ -271,30 +271,6 @@ nav ul li a:hover {
   z-index: 1040;
 }
 
-@media (min-width: 576px) {
-  .modal-dialog {
-    max-width: 70%;
-  }
-}
-
-@media (min-width: 768px) {
-  .modal-dialog {
-    max-width: 60%;
-  }
-}
-
-@media (min-width: 992px) {
-  .modal-dialog {
-    max-width: 50%;
-  }
-}
-
-@media (min-width: 1200px) {
-  .modal-dialog {
-    max-width: 40%;
-  }
-}
-
 .form {
   display: flex;
   flex-direction: column;
@@ -766,6 +742,9 @@ button {
     text-align: center;
     justify-content: center;
   }
+  .modal-dialog {
+    max-width: 70%;
+  }
 }
 
 @media (min-width: 576px) and (max-width: 768px) {
@@ -820,6 +799,7 @@ button {
   .accordion-body {
     font-size: 16px;
   }
+
   .hero__section-img {
     flex-direction: row;
     justify-content: flex-start;
@@ -828,6 +808,41 @@ button {
 
   .hero__section-img-A {
     margin-top: 2rem;
+  }
+
+  /* Additional styles for min-width: 576px and max-width: 768px */
+  .custom-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-info,
+  .profile-actions {
+    padding: 25px;
+  }
+
+  .profile-picture img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .aspect-ratio {
+    left: 80%;
+    transform: translateX(-50%);
+    margin-bottom: -150px;
+  }
+
+  .footer-1 {
+    flex-direction: row;
+  }
+
+  .hero__section-B {
+    font-size: 60px;
+    line-height: 70px;
+  }
+
+  .modal-dialog {
+    max-width: 60%;
   }
 }
 
@@ -857,6 +872,12 @@ button {
     font-size: 60px;
     line-height: 70px;
   }
+  .modal-dialog {
+    max-width: 60%;
+  }
+  .justify-content-between {
+    justify-content: center;
+  }
 }
 
 @media (min-width: 992px) {
@@ -880,6 +901,12 @@ button {
   .hero__section-img {
     margin-left: 135px;
   }
+  .modal-dialog {
+    max-width: 50%;
+  }
+  .custom-margin-right {
+    margin-right: 30%;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -897,6 +924,9 @@ button {
   }
   .custom-row {
     margin-right: 90px;
+  }
+  .modal-dialog {
+    max-width: 40%;
   }
 }
 
