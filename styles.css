@@ -729,10 +729,6 @@ button {
     justify-content: center;
   }
 
-  .modal-dialog {
-    max-width: 70%;
-  }
-
   .tab-content {
     margin-top: 20px;
     padding: 20px;
@@ -752,6 +748,7 @@ button {
     margin-bottom: 5px;
   }
   .custom-list-style {
+    margin-left: 50px;
     padding-left: 0;
   }
 
@@ -783,6 +780,35 @@ button {
   }
   .calendar {
     left: 4% !important;
+  }
+  .modal-dialog {
+    top: 12% !important;
+    left: 20% !important;
+    transform: translate(-50%, -50%);
+    z-index: 1050;
+  }
+  .modal-content {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .form-feedback {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+  }
+  .star-btn {
+    width: 35px;
+    padding: 0;
+  }
+  .btn {
+    padding: 4px 4px !important;
   }
 }
 
@@ -877,10 +903,6 @@ button {
   .hero__section-B {
     font-size: 60px;
     line-height: 70px;
-  }
-
-  .modal-dialog {
-    max-width: 60%;
   }
 }
 

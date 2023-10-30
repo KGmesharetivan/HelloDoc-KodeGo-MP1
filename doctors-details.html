@@ -225,7 +225,107 @@
 
                 <!-- Content for 'Feedback' tab (assuming it is a Bootstrap modal) -->
                 <div id="feedbackContent" class="tab-content">
-                  <!-- Include content from Feedback component here (as a Bootstrap modal) -->
+                  <div class="mt-5">
+                    <div class="mb-4">
+                      <h4 class="text-20px font-bold text-headingColor mb-4">
+                        All reviews (1)
+                      </h4>
+                      <div
+                        class="d-flex justify-content-between gap-10 mb-4 align-items-start"
+                      >
+                        <div class="d-flex gap-3">
+                          <div class="w-50 h-50 rounded-circle overflow-hidden">
+                            <img
+                              src="patient-avatar.png"
+                              alt=""
+                              class="w-100 h-100 rounded-circle"
+                            />
+                          </div>
+                          <div class="d-flex flex-column align-items-start">
+                            <h5 class="h5 font-weight-bold text-primary mb-2">
+                              Lea May Flores
+                            </h5>
+                            <p class="small text-secondary mb-2">
+                              October 30, 2023
+                            </p>
+                            <p class="font-weight-medium">Great Doctor!</p>
+                          </div>
+                        </div>
+
+                        <div class="d-flex gap-1">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-star-fill text-primaryColor"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              d="M7.594 1.99a1 1 0 0 1 1.818 0l1.347 3.251 3.386.293a1 1 0 0 1 .558 1.705l-2.46 2.198.79 3.37a1 1 0 0 1-1.532 1.054L8 12.347l-3.29 1.975a1 1 0 0 1-1.532-1.053l.79-3.371-2.46-2.197a1 1 0 0 1 .558-1.705l3.385-.292 1.347-3.252z"
+                            />
+                          </svg>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-star-fill text-primaryColor"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              d="M7.594 1.99a1 1 0 0 1 1.818 0l1.347 3.251 3.386.293a1 1 0 0 1 .558 1.705l-2.46 2.198.79 3.37a1 1 0 0 1-1.532 1.054L8 12.347l-3.29 1.975a1 1 0 0 1-1.532-1.053l.79-3.371-2.46-2.197a1 1 0 0 1 .558-1.705l3.385-.292 1.347-3.252z"
+                            />
+                          </svg>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-star-fill text-primaryColor"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              d="M7.594 1.99a1 1 0 0 1 1.818 0l1.347 3.251 3.386.293a1 1 0 0 1 .558 1.705l-2.46 2.198.79 3.37a1 1 0 0 1-1.532 1.054L8 12.347l-3.29 1.975a1 1 0 0 1-1.532-1.053l.79-3.371-2.46-2.197a1 1 0 0 1 .558-1.705l3.385-.292 1.347-3.252z"
+                            />
+                          </svg>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-star-fill text-primaryColor"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              d="M7.594 1.99a1 1 0 0 1 1.818 0l1.347 3.251 3.386.293a1 1 0 0 1 .558 1.705l-2.46 2.198.79 3.37a1 1 0 0 1-1.532 1.054L8 12.347l-3.29 1.975a1 1 0 0 1-1.532-1.053l.79-3.371-2.46-2.197a1 1 0 0 1 .558-1.705l3.385-.292 1.347-3.252z"
+                            />
+                          </svg>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-star text-primaryColor"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.719-4.192L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25z"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="text-center">
+                      <button
+                        class="btn btn-primary"
+                        data-bs-toggle="modal"
+                        data-bs-target="#feedbackModal"
+                      >
+                        Give Feedback
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -494,6 +594,117 @@
     </div>
     <!-- Login Modal End -->
 
+    <!-- Feedback Modal -->
+    <div
+      class="modal fade"
+      id="feedbackModal"
+      tabindex="-1"
+      aria-labelledby="feedbackModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="feedbackModalLabel">
+              How would you rate the overall experience?
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form action="" class="form-feedback">
+              <div class="">
+                <div id="star-rating" class="d-flex">
+                  <button
+                    type="button"
+                    class="star-btn"
+                    onmouseover="setHover(1)"
+                    onmouseout="setHover(0)"
+                    onclick="setRating(1)"
+                  >
+                    <span class="star-icon text-center">&#9733;</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="star-btn"
+                    onmouseover="setHover(2)"
+                    onmouseout="setHover(0)"
+                    onclick="setRating(2)"
+                  >
+                    <span class="star-icon">&#9733;</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="star-btn"
+                    onmouseover="setHover(3)"
+                    onmouseout="setHover(0)"
+                    onclick="setRating(3)"
+                  >
+                    <span class="star-icon">&#9733;</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="star-btn"
+                    onmouseover="setHover(4)"
+                    onmouseout="setHover(0)"
+                    onclick="setRating(4)"
+                  >
+                    <span class="star-icon">&#9733;</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="star-btn"
+                    onmouseover="setHover(5)"
+                    onmouseout="setHover(0)"
+                    onclick="setRating(5)"
+                  >
+                    <span class="star-icon">&#9733;</span>
+                  </button>
+                </div>
+                <p>Your rating: <span id="rating">0</span></p>
+              </div>
+
+              <div class="mb-4">
+                <h3 class="text-primary font-weight-semibold mb-4 mt-0">
+                  Share your feedback or suggestions
+                </h3>
+                <textarea
+                  id="feedback"
+                  class="form-control border-primary rounded"
+                  rows="5"
+                  placeholder="Write your message"
+                ></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="container">
+            <div class="d-flex align-items-start ml-2">
+              <button
+                type="submit"
+                class="btn btn-primary mr-2"
+                onclick="handleSubmitReview()"
+              >
+                Submit Feedback
+              </button>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Feedback Modal End -->
+
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -513,7 +724,7 @@
       });
     </script>
     <script>
-      let tab = null;
+      let tab = "about"; // Initialize tab with default value "about"
 
       function setTab(tabName) {
         if (tab === tabName) {
@@ -546,6 +757,34 @@
         .addEventListener("click", function () {
           setTab("feedback");
         });
+    </script>
+    <script>
+      let hover = 0;
+      let rating = 0;
+
+      function setHover(value) {
+        hover = value;
+        updateStarRating();
+      }
+
+      function setRating(value) {
+        rating = value;
+        updateStarRating();
+      }
+
+      function updateStarRating() {
+        const ratingSpan = document.getElementById("rating");
+        ratingSpan.textContent = rating;
+
+        const starButtons = document.querySelectorAll(".star-btn .star-icon");
+        starButtons.forEach((star, index) => {
+          if (hover >= index + 1 || rating >= index + 1) {
+            star.classList.add("text-warning");
+          } else {
+            star.classList.remove("text-warning");
+          }
+        });
+      }
     </script>
   </body>
 </html>
