@@ -107,7 +107,7 @@ nav ul li a:hover {
 .hero__section-A {
   display: flex;
   flex-direction: column;
-  gap: 90px;
+  gap: 115px;
   align-items: center;
   justify-content: space-between;
 }
