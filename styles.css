@@ -101,6 +101,7 @@ nav ul li a:hover {
   background-position: center;
   background-size: cover;
   padding-top: 60px;
+  padding-bottom: 30px;
 }
 
 .hero__section-A {
@@ -712,6 +713,7 @@ button {
     align-items: flex-end;
     gap: 30px;
   }
+
   .hero__section-img {
     display: flex;
     flex-direction: column;
@@ -1020,14 +1022,6 @@ button {
   .custom-form-container {
     flex-direction: row;
   }
-  .hero__section {
-    background-image: url("./hero-bg.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    padding-top: 60px;
-    height: 1350px;
-  }
 }
 
 @media (min-width: 1200px) {
@@ -1057,9 +1051,6 @@ button {
     flex-direction: row;
     align-items: center;
     gap: 30px;
-  }
-  .hero__section {
-    height: 800px;
   }
   .hero__section-A {
     flex-direction: row;
