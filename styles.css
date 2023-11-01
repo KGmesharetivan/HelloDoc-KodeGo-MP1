@@ -38,7 +38,7 @@ nav .logo-img {
   width: 75%;
   height: 75%;
   margin-top: -80px;
-  margin-left: -15px;
+  margin-left: -25px;
 }
 
 nav ul {
@@ -819,12 +819,14 @@ button {
   nav .container {
     flex-direction: row !important;
     justify-content: flex-end !important;
+    margin-top: 10px;
   }
   nav .navbar-brand {
     width: 50% !important;
   }
   .logo-img {
     width: 110% !important;
+    margin-left: -10px !important;
   }
   nav .navbar-toggler {
     margin-right: 10px;
@@ -1012,7 +1014,7 @@ button {
   nav .logo-img {
     width: 35%;
     height: 35%;
-    margin-left: 0;
+    margin-left: -5px !important;
   }
   .navbar-toggler {
     margin-top: -40px;
