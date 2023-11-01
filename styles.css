@@ -764,7 +764,6 @@ button {
     margin-bottom: 5px;
   }
   .custom-list-style {
-    margin-left: 50px;
     padding-left: 0;
   }
 
@@ -846,6 +845,9 @@ button {
   }
   nav {
     background-position: 0%;
+  }
+  .table-responsive-sm {
+    width: 100% !important;
   }
 }
 
