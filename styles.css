@@ -47,8 +47,8 @@ nav {
 nav .logo-img {
   width: 75%;
   height: 75%;
-  margin-top: -80px;
-  margin-left: -25px;
+  margin-top: -23%;
+  margin-left: -10%;
 }
 
 nav ul {
@@ -835,6 +835,8 @@ button {
   }
   nav .logo-img {
     width: 120% !important;
+    margin-top: -50% !important;
+    margin-left: -15% !important;
   }
   nav .navbar-toggler {
     margin-right: 10px;
@@ -1025,6 +1027,8 @@ button {
   nav .logo-img {
     width: 35%;
     height: 35%;
+    margin-top: -14%;
+    margin-left: -3%;
   }
   .navbar-toggler {
     margin-top: -40px;
