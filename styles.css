@@ -829,14 +829,12 @@ button {
   nav .container {
     flex-direction: row !important;
     justify-content: flex-end !important;
-    margin-top: 10px;
   }
   nav .navbar-brand {
     width: 50% !important;
   }
-  .logo-img {
-    width: 110% !important;
-    margin-left: -10px !important;
+  nav .logo-img {
+    width: 120% !important;
   }
   nav .navbar-toggler {
     margin-right: 10px;
