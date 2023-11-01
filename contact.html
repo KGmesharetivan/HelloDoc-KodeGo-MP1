@@ -20,65 +20,65 @@
   </head>
   <body>
     <main>
-     <!-- Navbar -->
-     <nav class="navbar navbar-expand-lg">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <img src="logo.png" alt="" class="logo-img" />
-        </a>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="logo.png" alt="" class="logo-img" />
+          </a>
 
-        <!-- Menu button (visible on small screens) -->
-        <button
-          id="menu-button"
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+          <!-- Menu button (visible on small screens) -->
+          <button
+            id="menu-button"
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-        <!-- Navigation menu -->
-        <div
-          class="collapse navbar-collapse justify-content-center navigation"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav menu">
-            <li class="nav-item">
-              <a class="text-[16px] leading-7 font-[600]" href="index.html"
-                >Home</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="text-[16px] leading-7 font-[600]" href="doctors.html"
-                >Doctors</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="text-[16px] leading-7 font-[600]" href="services.html"
-                >Services</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="text-[16px] leading-7 font-[600]" href="contact.html"
-                >Contact</a
-              >
-            </li>
-          </ul>
+          <!-- Navigation menu -->
+          <div
+            class="collapse navbar-collapse justify-content-center navigation"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav menu">
+              <li class="nav-item">
+                <a class="text-[16px] leading-7 font-[600]" href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="text-[16px] leading-7 font-[600]" href="doctors.html"
+                  >Doctors</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="text-[16px] leading-7 font-[600]" href="services.html"
+                  >Services</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="text-[16px] leading-7 font-[600]" href="contact.html"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <button
+            class="btn btn-primary font-weight-bold rounded-pill"
+            data-toggle="modal"
+            data-target="#loginModal"
+          >
+            Login
+          </button>
         </div>
-        <button
-          class="btn btn-primary font-weight-bold rounded-pill"
-          data-toggle="modal"
-          data-target="#loginModal"
-        >
-          Login
-        </button>
-      </div>
-    </nav>
-    <!-- Navbar End -->
+      </nav>
+      <!-- Navbar End -->
 
       <section>
         <div class="mt-5"></div>
@@ -272,7 +272,6 @@
     </footer>
     <!-- Footer Section End -->
 
-
     <!-- Login Modal -->
     <div
       class="modal fade"
@@ -370,6 +369,16 @@
         menuButton.addEventListener("click", function () {
           navigation.classList.toggle("show__menu");
         });
+      });
+    </script>
+    <script>
+      window.addEventListener("scroll", function () {
+        var navbar = document.querySelector(".navbar");
+        if (window.scrollY > 80) {
+          navbar.classList.add("sticky");
+        } else {
+          navbar.classList.remove("sticky");
+        }
       });
     </script>
   </body>

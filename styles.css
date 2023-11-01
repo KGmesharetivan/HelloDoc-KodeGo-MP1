@@ -4,10 +4,23 @@ body {
   flex-direction: column;
 }
 
-body nav.navbar {
+body nav.navbar.sticky {
   position: sticky;
   top: 0;
   z-index: 10;
+  background: #cbeef4;
+  background: -webkit-linear-gradient(
+    115deg,
+    #cbeef4 0%,
+    rgba(145, 80, 80, 0) 50%,
+    #ede2ca 100%
+  );
+  background: linear-gradient(
+    115deg,
+    #cbeef4 0%,
+    rgba(145, 80, 80, 0) 50%,
+    #ede2ca 100%
+  );
 }
 
 /* Main Layout Styles */
@@ -29,9 +42,6 @@ nav {
   height: 80px;
   line-height: 80px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 10;
 }
 
 nav .logo-img {
@@ -834,6 +844,9 @@ button {
   nav .btn {
     margin-right: 10px;
   }
+  nav {
+    background-position: 0%;
+  }
 }
 
 @media (min-width: 576px) and (max-width: 768px) {
@@ -1145,7 +1158,7 @@ button {
     position: absolute;
     top: 0;
     right: 0;
-    background: #fff;
+    background: #f7f5e8;
     z-index: 200;
     flex-direction: column;
     justify-content: center;
