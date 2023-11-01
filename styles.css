@@ -461,6 +461,7 @@ button {
   gap: 30px;
   padding-top: 4px;
   margin-bottom: 0;
+  margin-left: -25px;
 }
 
 .custom-list-style li {
@@ -763,9 +764,6 @@ button {
   .custom-p-style {
     margin-bottom: 5px;
   }
-  .custom-list-style {
-    padding-left: 0;
-  }
 
   .custom-list-style li {
     list-style: none;
@@ -1001,9 +999,6 @@ button {
   .custom-span-style,
   .custom-p-style {
     margin-bottom: 5px;
-  }
-  .custom-list-style {
-    padding-left: 0;
   }
 
   .custom-list-style li .custom-span-style,
