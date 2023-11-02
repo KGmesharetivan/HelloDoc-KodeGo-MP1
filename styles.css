@@ -219,16 +219,7 @@ nav ul li a:hover {
 .modal-dialog {
   position: fixed;
   top: 12% !important;
-  transform: translate(-50%, -50%);
-  max-width: 400px;
-  width: 100%;
-  z-index: 1050;
-}
-
-.modal-dialog {
-  position: fixed;
-  top: 12% !important;
-  left: 3% !important;
+  right: 5% !important;
   transform: translate(-50%, -50%);
   max-width: 90%;
   width: 100%;
@@ -240,14 +231,23 @@ nav ul li a:hover {
   padding: 1rem;
   border-radius: 0.5rem;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-height: 80vh;
+  width: 120% !important;
+  height: 45vh !important;
   overflow-y: auto;
+}
+
+.modal-content-feedback {
+  width: 100% !important;
+  height: 70vh !important;
+}
+
+.modal-dialog-feedback {
+  top: 8% !important;
+  left: -2% !important;
 }
 
 .modal-body {
   display: flex;
-  flex-direction: column;
   align-items: center;
   gap: 1rem;
   width: 100%;
@@ -797,21 +797,7 @@ button {
   .calendar {
     left: 4% !important;
   }
-  .modal-dialog {
-    top: 12% !important;
-    left: 20% !important;
-    transform: translate(-50%, -50%);
-    z-index: 1050;
-  }
-  .modal-content {
-    background-color: #fff;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    max-width: 400px;
-    margin: 0 auto;
-  }
+
   .form-feedback {
     display: flex;
     flex-direction: column;
@@ -859,6 +845,20 @@ button {
   }
   .table-responsive-sm {
     width: 100% !important;
+  }
+  .modal-body {
+    display: flex;
+    flex-direction: column;
+  }
+  .modal-content {
+    height: 80vh !important;
+  }
+  .modal-dialog-feedback {
+    top: 10px !important;
+    left: 3% !important;
+  }
+  .modal-content-feedback {
+    height: 95vh !important;
   }
 }
 
@@ -955,6 +955,13 @@ button {
     font-size: 60px;
     line-height: 70px;
   }
+  .modal-content {
+    height: 60vh !important;
+  }
+  .modal-content-feedback {
+    height: 80vh !important;
+    right: -6% !important;
+  }
 }
 
 @media (max-width: 768px) {
@@ -982,9 +989,6 @@ button {
   .hero__section-B {
     font-size: 60px;
     line-height: 70px;
-  }
-  .modal-dialog {
-    max-width: 60%;
   }
   .justify-content-between {
     justify-content: center;
@@ -1073,9 +1077,7 @@ button {
   .hero__section-img {
     margin-left: 135px;
   }
-  .modal-dialog {
-    max-width: 50%;
-  }
+
   .custom-margin-right {
     margin-right: 30%;
   }
@@ -1105,9 +1107,6 @@ button {
   }
   .custom-row {
     margin-right: 90px;
-  }
-  .modal-dialog {
-    max-width: 40%;
   }
 }
 
