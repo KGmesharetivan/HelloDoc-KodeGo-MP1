@@ -687,6 +687,11 @@ button {
   }
   .about-img {
     width: 300px;
+    height: 300px;
+  }
+
+  .about-img-1 {
+    width: 300px;
     height: 450px;
   }
 
