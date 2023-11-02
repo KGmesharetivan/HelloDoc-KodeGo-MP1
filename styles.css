@@ -669,6 +669,10 @@ button {
   margin-left: 5px;
 }
 
+.custom-btn-style {
+  border-radius: 0% 25% 25% 0% / 25% 25% 25% 25%;
+}
+
 @media (max-width: 576px) {
   .position-relative-custom {
     position: relative;
