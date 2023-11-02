@@ -8,19 +8,9 @@ body nav.navbar.sticky {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: #cbeef4;
-  background: -webkit-linear-gradient(
-    115deg,
-    #cbeef4 0%,
-    rgba(145, 80, 80, 0) 50%,
-    #ede2ca 100%
-  );
-  background: linear-gradient(
-    115deg,
-    #cbeef4 0%,
-    rgba(145, 80, 80, 0) 50%,
-    #ede2ca 100%
-  );
+  background: #f7f2cb;
+  background: -webkit-linear-gradient(0deg, #f7f2cb 0%, #caf9ff 100%);
+  background: linear-gradient(0deg, #f7f2cb 0%, #caf9ff 100%);
 }
 
 /* Main Layout Styles */
