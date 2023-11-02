@@ -122,7 +122,7 @@ nav ul li a:hover {
 
 .hero__section-img {
   display: flex;
-  gap: 3vw;
+  gap: 1vw;
   justify-content: flex-end;
   margin-left: 50px;
 }
