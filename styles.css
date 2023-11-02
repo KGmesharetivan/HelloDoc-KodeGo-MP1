@@ -919,6 +919,7 @@ button {
     flex-direction: row;
     justify-content: flex-start;
     margin-right: 50px;
+    gap: 20px;
   }
 
   .hero__section-img-A {
