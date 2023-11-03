@@ -615,7 +615,6 @@ button {
 
 .button-group {
   display: flex;
-  align-items: center;
   gap: 25px;
 }
 
@@ -627,31 +626,22 @@ button {
 }
 
 .custom-button {
-  background-color: #2196f3;
-  color: white;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 8px;
-  font-size: 18px;
+  padding: 10px 20px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  border-radius: 10%;
 }
 
-.blue-button {
-  background-color: blue;
-  color: white;
-  border-color: blue;
+.tab-content .tab-pane {
+  display: none;
 }
 
-.white-button {
-  background-color: white;
-  color: black;
-  border-color: gray;
+.tab-content .active {
+  display: block;
 }
 
-.custom-button:hover {
-  background-color: #ccc;
-  color: black;
+.custom-button.active-tab {
+  border-bottom: 2px solid rgb(0, 123, 255);
+  border-radius: 0;
 }
 
 .position-relative-custom {
@@ -1023,11 +1013,6 @@ button {
     justify-content: center;
   }
 
-  .tab-content {
-    margin-top: 20px;
-    padding: 20px;
-  }
-
   .tab-content h3 {
     font-size: 18px;
     margin-bottom: 10px;
@@ -1147,6 +1132,22 @@ button {
     margin-top: 10% !important;
     margin-bottom: 10% !important;
   }
+  .profile {
+    flex-direction: column !important;
+  }
+
+  .profile-info,
+  .profile-actions {
+    width: 100% !important;
+    padding: 0 !important;
+    margin-bottom: 50px !important;
+  }
+  .profile-actions {
+    align-items: center !important;
+  }
+  .tab-content {
+    height: 100vh;
+  }
 }
 
 @media (min-width: 576px) and (max-width: 768px) {
@@ -1263,6 +1264,15 @@ button {
 }
 
 @media (max-width: 768px) {
+  .avatar-icon {
+    align-items: center;
+    margin-top: -45px;
+  }
+  .profile-actions {
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
   .custom-row {
     flex-direction: column;
     align-items: flex-start;
@@ -1270,6 +1280,7 @@ button {
   .profile-info,
   .profile-actions {
     padding: 25px;
+    width: 60%;
   }
 
   .profile-picture img {
@@ -1292,8 +1303,9 @@ button {
     justify-content: center;
   }
   .tab-content {
-    margin-top: 20px;
-    padding: 20px;
+    margin-top: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
   }
 
   .tab-content h3 {
@@ -1361,7 +1373,7 @@ button {
   }
 
   .profile-actions {
-    width: 40%;
+    width: 130%;
     padding: 30px;
   }
 
@@ -1378,6 +1390,7 @@ button {
 
   .custom-margin-right {
     margin-right: 30%;
+    gap: 90px !important;
   }
   .custom-list-item {
     flex-direction: row;
