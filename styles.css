@@ -248,7 +248,7 @@ nav ul li a:hover {
 
 .modal-content-payout {
   width: 140% !important;
-  height: 80vh !important;
+  height: 65vh !important;
 }
 
 .modal-dialog-payout {
@@ -258,7 +258,6 @@ nav ul li a:hover {
 
 .modal-body {
   display: flex;
-  align-items: center;
   gap: 1rem;
   width: 100%;
 }
@@ -1131,6 +1130,15 @@ button {
   .modal-content-feedback {
     height: 95vh !important;
   }
+  .payment--options {
+    grid-template-columns: none !important;
+  }
+  .credit-card-info--form {
+    width: 80%;
+  }
+  .purchase--btn {
+    width: 80%;
+  }
 }
 
 @media (min-width: 576px) and (max-width: 768px) {
@@ -1232,6 +1240,13 @@ button {
   .modal-content-feedback {
     height: 80vh !important;
     right: -6% !important;
+  }
+  .modal-dialog-payout {
+    top: -1% !important;
+    left: -12% !important;
+  }
+  .modal-content-payout {
+    height: 90vh !important;
   }
 }
 
