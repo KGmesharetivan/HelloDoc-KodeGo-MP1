@@ -933,6 +933,10 @@ button {
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 }
 
+.custom-appoinment {
+  margin-top: 5%;
+}
+
 @keyframes animate {
   from {
     transform: scale(1);
@@ -1139,6 +1143,10 @@ button {
   .purchase--btn {
     width: 80%;
   }
+  .custom-appoinment {
+    margin-top: 10% !important;
+    margin-bottom: 10% !important;
+  }
 }
 
 @media (min-width: 576px) and (max-width: 768px) {
@@ -1247,6 +1255,10 @@ button {
   }
   .modal-content-payout {
     height: 90vh !important;
+  }
+  .custom-appoinment {
+    margin-top: 10% !important;
+    margin-bottom: 5% !important;
   }
 }
 
