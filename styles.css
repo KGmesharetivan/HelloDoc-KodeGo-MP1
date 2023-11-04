@@ -1145,7 +1145,7 @@ button {
   .profile-actions {
     align-items: center !important;
   }
-  .tab-content {
+  .tab-content-profile {
     height: 100vh;
   }
 }

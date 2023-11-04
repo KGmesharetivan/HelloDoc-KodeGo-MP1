@@ -83,7 +83,7 @@
       <section class="mt-3">
         <div class="container">
           <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-8 mb-3">
               <div class="custom-flex-container">
                 <div>
                   <figure>
@@ -329,6 +329,7 @@
                 </div>
               </div>
             </div>
+
             <div class="col-md-4">
               <div class="shadow p-3 lg:p-5 rounded-md">
                 <div class="d-flex justify-content-between">
@@ -756,8 +757,13 @@
         .getElementById("feedbackButton")
         .addEventListener("click", function () {
           setTab("feedback");
+          document.getElementById("feedbackContent").style.display = "block";
         });
+
+      // Hide the feedbackContent when the page loads
+      document.getElementById("feedbackContent").style.display = "none";
     </script>
+
     <script>
       let hover = 0;
       let rating = 0;
