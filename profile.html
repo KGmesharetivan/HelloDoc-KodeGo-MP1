@@ -422,6 +422,11 @@
       });
     </script>
     <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Show the "My Bookings" tab by default
+        changeTab("bookings");
+      });
+
       function changeTab(tabName) {
         var tabs = document.querySelectorAll(".tab-pane");
         var buttons = document.querySelectorAll(".custom-button");
@@ -431,12 +436,14 @@
           buttons[i].classList.remove("active-tab");
         }
 
-        document.getElementById(tabName).style.display = "block";
+        if (tabName === "bookings" || tabName === "settings") {
+          document.getElementById(tabName).style.display = "block";
 
-        var activeButton = document.querySelector(
-          "[onclick=\"changeTab('" + tabName + "')\"]"
-        );
-        activeButton.classList.add("active-tab");
+          var activeButton = document.querySelector(
+            "[onclick=\"changeTab('" + tabName + "')\"]"
+          );
+          activeButton.classList.add("active-tab");
+        }
       }
     </script>
   </body>
