@@ -806,6 +806,7 @@ button {
 
 .input_field[type="number"] {
   -moz-appearance: textfield;
+  appearance: auto;
 }
 
 .card {
