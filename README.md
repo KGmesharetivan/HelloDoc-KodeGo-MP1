@@ -46,4 +46,4 @@ Contribution
 Contributions are welcome! Feel free to open issues or submit pull requests to help us improve HelloDoc.
 
 
-# Thank you for choosing HelloDoc for your online medical appointment needs. If you have any questions or need assistance, feel free to contact us. Happy scheduling!
+
