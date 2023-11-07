@@ -21,9 +21,14 @@ $(function () {
     }
   }
 
-  window.onload = function () {
+  // Use DOMContentLoaded and load events to ensure compatibility with various scenarios
+  document.addEventListener("DOMContentLoaded", function () {
     populateTimeDropdowns();
-  };
+  });
+
+  window.addEventListener("load", function () {
+    populateTimeDropdowns();
+  });
 
   if (typeof Storage !== "undefined") {
     arrAppointment = localStorage.getItem("tbAppointment");
