@@ -1,35 +1,6 @@
 let arrAppointment;
 
 $(function () {
-  // function populateTimeDropdowns() {
-  //   var startTimeDropdown = document.getElementById("start_time");
-  //   var endTimeDropdown = document.getElementById("end_time");
-
-  //   for (var i = 0; i < 24; i++) {
-  //     var hour = i < 10 ? "0" + i : i;
-
-  //     var optionStart = document.createElement("option");
-  //     optionStart.value = hour + ":00";
-  //     optionStart.text = hour + ":00";
-
-  //     var optionEnd = document.createElement("option");
-  //     optionEnd.value = hour + ":00";
-  //     optionEnd.text = hour + ":00";
-
-  //     startTimeDropdown.appendChild(optionStart);
-  //     endTimeDropdown.appendChild(optionEnd);
-  //   }
-  // }
-
-  // // Use DOMContentLoaded and load events to ensure compatibility with various scenarios
-  // document.addEventListener("DOMContentLoaded", function () {
-  //   populateTimeDropdowns();
-  // });
-
-  // window.addEventListener("load", function () {
-  //   populateTimeDropdowns();
-  // });
-
   if (typeof Storage !== "undefined") {
     arrAppointment = localStorage.getItem("tbAppointment");
     arrAppointment = JSON.parse(arrAppointment);
@@ -53,36 +24,6 @@ $(function () {
       timeout: 20000,
     });
   }
-
-  // $("#description").inputmask("Regex", {
-  //   regex: "(?:[\\w\\d]+(\\s)*){1,5}",
-  //   clearIncomplete: true,
-  // });
-
-  // $("#start_time").inputmask("hh:mm", {
-  //   placeholder: "hh:mm (24h)",
-  //   alias: "datetime",
-  //   clearIncomplete: true,
-  //   oncomplete: function () {
-  //     $("#end_time").focus();
-  //   },
-  // });
-
-  // $("#end_time").inputmask("hh:mm", {
-  //   placeholder: "hh:mm (24h)",
-  //   alias: "datetime",
-  //   clearIncomplete: true,
-  //   oncomplete: function () {
-  //     compare();
-  //     $("#submit").focus();
-  //   },
-  // });
-
-  // $(".date-input").inputmask("dd/mm/yyyy", {
-  //   placeholder: "dd/mm/yyyy",
-  //   alias: "datetime",
-  //   clearIncomplete: true,
-  // });
 
   $('[data-toggle="popover"]').popover();
 
