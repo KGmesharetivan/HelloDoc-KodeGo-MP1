@@ -1245,6 +1245,9 @@ button {
   .login-img {
     margin-left: 2%;
   }
+  .logo-footer {
+    margin-top: 15px;
+  }
 }
 
 @media (min-width: 375px) and (max-width: 576px) {
