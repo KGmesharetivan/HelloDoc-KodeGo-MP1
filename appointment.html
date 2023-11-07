@@ -107,36 +107,19 @@
               </div>
             </div>
 
-            <!-- Calendar Column -->
-            <div class="calendar col-md-8">
-              <div>
-                <div class="card-header bg-primary">
-                  <div
-                    class="text-white text-uppercase text-center"
-                    id="month"
-                  ></div>
-                  <div
-                    class="text-white text-uppercase text-center"
-                    id="year"
-                  ></div>
-                </div>
-
-                <table class="table calendar table-bordered" id="calendar">
-                  <thead>
-                    <tr class="weekdays bg-dark">
-                      <th scope="col" class="text-white text-center">Mo</th>
-                      <th scope="col" class="text-white text-center">Tu</th>
-                      <th scope="col" class="text-white text-center">We</th>
-                      <th scope="col" class="text-white text-center">Th</th>
-                      <th scope="col" class="text-white text-center">Fr</th>
-                      <th scope="col" class="text-white text-center">Sa</th>
-                      <th scope="col" class="text-white text-center">Su</th>
-                    </tr>
-                  </thead>
-                  <tbody class="days bg-light" id="days"></tbody>
-                  <tfoot></tfoot>
-                </table>
-              </div>
+            <div class="container calendar col-md-8">
+              <!-- Calendly inline widget begin -->
+              <div
+                class="calendly-inline-widget"
+                data-url="https://calendly.com/mesharetivan/appointment?hide_event_type_details=1&hide_gdpr_banner=1"
+                style="min-width: 320px; height: 700px"
+              ></div>
+              <script
+                type="text/javascript"
+                src="https://assets.calendly.com/assets/external/widget.js"
+                async
+              ></script>
+              <!-- Calendly inline widget end -->
             </div>
           </div>
 
@@ -155,68 +138,42 @@
                 book your appointment.
               </p>
             </div>
-
-            <div class="col-md-7 offset-md-1">
-              <form id="form_create_appointment">
-                <div class="form-row">
-                  <div class="col form-group">
-                    <label class="required">Date</label>
-                    <input
-                      class="form-control date-input"
-                      type="text"
-                      id="date"
-                      data-container="body"
-                      data-trigger="hover"
-                      data-toggle="popover"
-                      title="Date"
-                      data-content="You can select any date from today clicking on the number in the calendar"
-                      required
-                    />
-                  </div>
-                  <div class="col form-group">
-                    <label>Description</label>
-                    <input class="form-control" type="text" id="description" />
-                  </div>
-                </div>
-                <div class="form-row">
-                  <div class="col form-group">
-                    <label class="required">Start Time</label>
-                    4:00 PM
-                  </div>
-                  <div class="col form-group">
-                    <label class="required">End Time</label>
-                    4:30 PM
-                  </div>
-                </div>
-                <div class="form-row">
-                  <div class="col form-group">
-                    <button
-                      type="button"
-                      class="btn btn-warning btn-block"
-                      id="clear"
-                      onclick="clear_input()"
-                    >
-                      Clear Form
-                    </button>
-                  </div>
-                  <div class="col form-group">
-                    <button
-                      type="button"
-                      class="btn btn-primary btn-block"
-                      data-toggle="modal"
-                      data-target="#payoutModal"
-                      id="submit"
-                      disabled="disabled"
-                    >
-                      Make Appointment
-                    </button>
-                  </div>
-                </div>
-              </form>
-            </div>
           </div>
         </div>
       </section>
+      <!-- Load Calendly widget script asynchronously -->
+      <script>
+        function loadScript(src, callback) {
+          var script = document.createElement("script");
+          script.type = "text/javascript";
+          script.src = src;
+          script.onload = callback;
+          document.head.appendChild(script);
+        }
+
+        // Initialize Calendly widget after the script is loaded
+        loadScript(
+          "https://assets.calendly.com/assets/external/widget.js",
+          function () {
+            // Redirect to the specified URL after successful scheduling
+            Calendly.initInlineWidget({
+              url: "https://calendly.com/mesharetivan/appointment",
+              parentElement: document.getElementById("calendly-embed"),
+              prefill: { name: "John Doe", email: "johndoe@example.com" },
+              utm: { source: "website", medium: "embed" },
+              primaryColor: "#00a2ff",
+              textColor: "#ffffff",
+              backgroundColor: "#333333",
+              autoLoad: true,
+            });
+
+            Calendly.on("scheduling.scheduled", function () {
+              window.location.href =
+                "https://kgmesharetivan.github.io/HelloDoc-KodeGo-MP1/appointmentSuccess.html";
+            });
+          }
+        );
+      </script>
     </main>
 
     <!-- Footer Section -->
@@ -590,9 +547,6 @@
 
     <!-- Include jQuery (required by Bootstrap) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <!-- Your Custom JavaScript File -->
-    <script src="script.js"></script>
 
     <!-- Popper JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
