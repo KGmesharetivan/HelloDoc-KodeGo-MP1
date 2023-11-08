@@ -1225,6 +1225,10 @@ button {
   .custom-list-style {
     margin-left: 5%;
   }
+  .modal-content-feedback {
+    right: 0 !important;
+    left: 5% !important;
+  }
 }
 
 @media (min-width: 576px) and (max-width: 768px) {
