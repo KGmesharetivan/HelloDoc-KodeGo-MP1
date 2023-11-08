@@ -234,11 +234,12 @@ nav ul li a:hover {
   width: 120% !important;
   height: 50vh !important;
   overflow-y: auto;
+  align-items: center;
 }
 
 .modal-content-feedback {
-  width: 100% !important;
-  height: 70vh !important;
+  width: 140% !important;
+  height: 65vh !important;
 }
 
 .modal-dialog-feedback {
@@ -260,6 +261,7 @@ nav ul li a:hover {
   display: flex;
   gap: 1rem;
   width: 100%;
+  justify-content: center;
 }
 
 .modal-body img {
@@ -620,6 +622,8 @@ button {
 
 .btn-feedback {
   margin-left: 5px;
+  display: flex;
+  justify-content: center;
 }
 
 .custom-btn-style {
@@ -1171,6 +1175,8 @@ button {
   }
   .modal-content-feedback {
     height: 95vh !important;
+    right: 2%;
+    width: 300px !important;
   }
   .payment--options {
     grid-template-columns: none !important;
@@ -1319,7 +1325,7 @@ button {
   }
   .modal-content-feedback {
     height: 80vh !important;
-    right: -6% !important;
+    right: 17% !important;
   }
   .modal-dialog-payout {
     top: -1% !important;
