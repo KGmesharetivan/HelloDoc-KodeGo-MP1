@@ -1209,7 +1209,7 @@ button {
     height: 100vh;
   }
   .login-img {
-    margin-left: 2%;
+    margin-left: 1%;
   }
   .logo-footer {
     margin-top: 15px;
@@ -1219,7 +1219,7 @@ button {
   }
 }
 
-@media (min-width: 330px) and (max-width: 576px) {
+@media (min-width: 350px) and (max-width: 575px) {
   .login-img {
     margin-left: 10%;
   }
