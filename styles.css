@@ -493,52 +493,6 @@ button {
   width: 100%;
 }
 
-/* Calendar Column Styles */
-
-/* Calendar Card Styles */
-.calendar .card-header {
-  background-color: #007bff;
-}
-
-/* Month and Year Text Styles */
-.calendar #month,
-.calendar #year {
-  font-size: 1.5rem;
-}
-
-/* Weekdays Header Styles */
-.calendar .weekdays th {
-  background-color: #343a40;
-  color: #ffffff;
-  text-align: center;
-}
-
-/* Days Styles */
-.calendar .days td {
-  text-align: center;
-  padding: 10px;
-}
-
-/* Highlight Today's Date */
-.calendar .days td.today {
-  background-color: #007bff;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-/* Highlight Selected Date */
-.calendar .days td.selected {
-  background-color: #28a745;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-/* Hover Effect on Days */
-.calendar .days td:hover {
-  background-color: #f8f9fa;
-  cursor: pointer;
-}
-
 .profile-info,
 .profile-actions {
   padding: 20px;
@@ -1021,6 +975,11 @@ button {
   font-weight: 600;
 }
 
+.calendly-inline-widget {
+  margin-top: -55px;
+  padding: 0;
+}
+
 @keyframes animate {
   from {
     transform: scale(1);
@@ -1032,6 +991,9 @@ button {
 }
 
 @media (max-width: 576px) {
+  .col-md-8 {
+    margin-left: 0 !important;
+  }
   .position-relative-custom {
     position: relative;
     display: flex;
@@ -1147,9 +1109,6 @@ button {
     border-bottom: none !important;
     display: flex;
   }
-  .calendar {
-    left: 4% !important;
-  }
 
   .form-feedback {
     display: flex;
@@ -1247,6 +1206,9 @@ button {
   }
   .logo-footer {
     margin-top: 15px;
+  }
+  .calendly-inline-widget {
+    min-width: 120px !important;
   }
 }
 
@@ -1373,6 +1335,10 @@ button {
 }
 
 @media (max-width: 768px) {
+  .col-md-8 {
+    margin-left: -5%;
+    height: 500px;
+  }
   .avatar-icon {
     align-items: center;
     margin-top: -45px;
@@ -1473,6 +1439,9 @@ button {
   .btn-feedback {
     margin-left: 17px;
   }
+  .calendly-inline-widget {
+    margin-top: -10px !important;
+  }
 }
 
 @media (min-width: 992px) {
@@ -1509,6 +1478,10 @@ button {
   }
   .custom-form-container {
     flex-direction: row;
+  }
+
+  .col-md-8 {
+    margin-left: -20%;
   }
 }
 

@@ -80,9 +80,9 @@
 
       <section class="mt-5">
         <div class="container">
-          <div class="row w-100">
+          <div class="row">
             <div
-              class="col d-flex justify-content-center align-items-center flex-column"
+              class="col d-flex justify-content-start align-items-center flex-column"
             >
               <img
                 src="doctor-img01.png"
@@ -107,7 +107,7 @@
               </div>
             </div>
 
-            <div class="container calendar col-md-8">
+            <div class="col-md-8">
               <!-- Calendly inline widget begin -->
               <div
                 class="calendly-inline-widget"
@@ -123,7 +123,6 @@
             </div>
           </div>
 
-          <br />
           <hr />
 
           <div class="row">
@@ -141,39 +140,6 @@
           </div>
         </div>
       </section>
-      <!-- Load Calendly widget script asynchronously -->
-      <script>
-        function loadScript(src, callback) {
-          var script = document.createElement("script");
-          script.type = "text/javascript";
-          script.src = src;
-          script.onload = callback;
-          document.head.appendChild(script);
-        }
-
-        // Initialize Calendly widget after the script is loaded
-        loadScript(
-          "https://assets.calendly.com/assets/external/widget.js",
-          function () {
-            // Redirect to the specified URL after successful scheduling
-            Calendly.initInlineWidget({
-              url: "https://calendly.com/mesharetivan/appointment",
-              parentElement: document.getElementById("calendly-embed"),
-              prefill: { name: "John Doe", email: "johndoe@example.com" },
-              utm: { source: "website", medium: "embed" },
-              primaryColor: "#00a2ff",
-              textColor: "#ffffff",
-              backgroundColor: "#333333",
-              autoLoad: true,
-            });
-
-            Calendly.on("scheduling.scheduled", function () {
-              window.location.href =
-                "https://kgmesharetivan.github.io/HelloDoc-KodeGo-MP1/appointmentSuccess.html";
-            });
-          }
-        );
-      </script>
     </main>
 
     <!-- Footer Section -->
