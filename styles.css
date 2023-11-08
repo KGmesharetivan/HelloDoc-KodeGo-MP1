@@ -991,7 +991,7 @@ button {
 }
 
 @media (max-width: 576px) {
-  .col-md-8 {
+  .custom-appt {
     margin-left: 0 !important;
   }
   .position-relative-custom {
@@ -1335,7 +1335,7 @@ button {
 }
 
 @media (max-width: 768px) {
-  .col-md-8 {
+  .custom-appt {
     margin-left: -5%;
     height: 500px;
   }
@@ -1480,7 +1480,7 @@ button {
     flex-direction: row;
   }
 
-  .col-md-8 {
+  .custom-appt {
     margin-left: -20%;
   }
 }
