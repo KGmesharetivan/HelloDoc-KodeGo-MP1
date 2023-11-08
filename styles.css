@@ -2,6 +2,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  font-family: "Manrope", sans-serif;
 }
 
 body nav.navbar.sticky {
