@@ -1219,7 +1219,7 @@ button {
   }
 }
 
-@media (min-width: 375px) and (max-width: 576px) {
+@media (min-width: 330px) and (max-width: 576px) {
   .login-img {
     margin-left: 10%;
   }
