@@ -115,15 +115,15 @@ nav ul li a:hover {
 }
 
 .hero__section-B {
-  font-size: 36px;
-  line-height: 46px;
+  font-size: 60px;
+  line-height: 70px;
   color: #181a1e;
   font-weight: 800;
 }
 
 .hero__section-img {
   display: flex;
-  gap: 1vw;
+  gap: 2vw;
   justify-content: flex-end;
   margin-left: 50px;
 }
@@ -993,6 +993,10 @@ button {
   margin-top: 1rem;
 }
 
+.text-start-1 {
+  margin-top: 25px;
+}
+
 @keyframes animate {
   from {
     transform: scale(1);
@@ -1004,6 +1008,14 @@ button {
 }
 
 @media (max-width: 576px) {
+  .hero__section-B {
+    font-size: 36px !important;
+    line-height: 48px !important;
+  }
+  .review {
+    flex-direction: column !important;
+    gap: 0 !important;
+  }
   .custom-appt {
     margin-left: 0 !important;
   }
@@ -1297,7 +1309,7 @@ button {
     flex-direction: row;
     justify-content: flex-start;
     margin-right: 50px;
-    gap: 20px;
+    gap: 30px;
   }
 
   .hero__section-img-A {
@@ -1329,10 +1341,6 @@ button {
     flex-direction: row;
   }
 
-  .hero__section-B {
-    font-size: 60px;
-    line-height: 70px;
-  }
   .modal-content {
     height: 60vh !important;
   }
@@ -1354,6 +1362,17 @@ button {
 }
 
 @media (max-width: 768px) {
+  .hero__section-A {
+    gap: 45px;
+  }
+
+  .review {
+    flex-direction: row;
+    gap: 30px;
+  }
+  .text-start-1 {
+    margin-top: 0;
+  }
   .custom-appt {
     margin-left: -5%;
     height: 500px;
