@@ -167,10 +167,10 @@ nav ul li a:hover {
 }
 
 .review {
-  margin-top: 30px; /* Default margin-top */
+  margin-top: 70px;
   display: flex;
-  flex-direction: column;
-  gap: 5px;
+  flex-direction: row;
+  gap: 30px;
 }
 
 .form__label {
@@ -993,10 +993,6 @@ button {
   margin-top: 1rem;
 }
 
-.text-start-1 {
-  margin-top: 25px;
-}
-
 @keyframes animate {
   from {
     transform: scale(1);
@@ -1542,12 +1538,6 @@ button {
 }
 
 @media (min-width: 1440px) {
-  .review {
-    margin-top: 70px;
-    flex-direction: row;
-    align-items: center;
-    gap: 30px;
-  }
   .hero__section-A {
     flex-direction: row;
   }
@@ -1555,7 +1545,7 @@ button {
     margin-left: 35px;
   }
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1023px) {
   nav {
     flex-direction: column;
     padding: 10px;
